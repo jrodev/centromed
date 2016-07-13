@@ -1,0 +1,72 @@
+body {
+    background: none;
+    font: 16px  Cambria, Times, Times New Roman, serif;
+}
+
+h1, h2 {
+	font: 20px  Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+h3, h4, h5, h6 {
+    font: 18px  Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+ul, ol, li {
+    margin: 0 0 3px 10pt;
+    padding: 0 !important;
+}
+
+th, td {
+    padding: 2px 3px;
+    border: 1px solid #000
+}
+
+.postmeta li{
+	display:inline;
+	margin-right:10pt;
+}
+#header {
+    background:none;
+	height:auto;
+	width:100%;
+}
+
+#header h1, #header h2, #header em{
+    float:left;
+	width:100%;
+}
+
+.sidebar {
+    display: none;
+}
+
+#footer {
+    display: none;
+}
+
+#nav {
+    display: none;
+}
+
+.wp-pagenavi {
+    display: none;
+}
+
+#respond {
+    display: none;
+}
+
+.reply {
+    display: none;
+}
+
+#footermenu{
+	display:none;
+}
+.comment {
+    padding: 10px
+}
+
+#comments, .post, .comment {
+    border: none
+}

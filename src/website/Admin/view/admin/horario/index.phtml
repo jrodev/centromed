@@ -1,0 +1,147 @@
+
+        <?php
+        $sede = $this->sede;  // Viene desde el action admin/index/horario
+        $espc = $this->espc;  // Viene desde el action admin/index/horario
+        ?>
+        
+        <!-- Mensajes del Calendar -->
+        <div id="msgCalendar">
+            <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                <strong>Aviso:</strong> Si desea puede seleccionar otra sede o consultorio para poder generar el horario para un especialista.
+            </div>
+        </div>
+
+        <!-- Seccion de sede y cosultorio -->
+        <form id="selCalendar" class="form-inline">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-home"></span>
+                    </div>
+                    <select class="form-control" id="frmsede">
+                        <?php foreach($sede as $i=>$v):?>
+                        <option value="<?php echo $i?>"><?php echo $v?></option>
+                        <?php endforeach;?>
+                    </select>                    
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-plus-sign"></span></div>
+                    <select class="form-control" id="frmroom">
+                        <option value="0">- Elija un consultorio</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Calendario FullCalendar -->
+        <div id='calendar' style="position:relative;"></div>
+        
+        <!-- Save Modal -->
+        <div class="modal fade" id="modalSave" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="width:500px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="modalSaveTitle">Form for event</h4>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="frmroom" class="col-sm-3 control-label">Consultorio :</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control input_width6" id="frmroom2">
+                                        <option value="0">- Elija un consultorio</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="frmesp" class="col-sm-3 control-label">Especialista :</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control input_width6" id="frmesp">
+                                        <option value="0">- Elija un Especialista</option>
+                                        <?php foreach($espc as $i=>$v):?>
+                                        <option value="<?php echo $i?>"><?php echo $v?></option>
+                                        <?php endforeach;?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="frmstart" class="col-sm-3 control-label">Hora incio :</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="text" id="frmstart" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="frmend" class="col-sm-3 control-label">Hora fin :</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="text" id="frmend" readonly />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="frmdesc" class="col-sm-3 control-label">Descripcion :</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" rows="3" id="frmdesc"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button id="fcBtnModalSave" type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="width:500px;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="modalEditTitleditTitle">Editar evento</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Cliente</th>
+                                                    <th>Fecha y hora</th>
+                                                    <th>Pago</th>
+                                                    <th>Estado cita</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="horarioCitas">
+                                                <tr>
+                                                    <td>#</td>
+                                                    <td>Cliente</td>
+                                                    <td>Fecha y hora</td>
+                                                    <td>Pago</td>
+                                                    <td>Estado cita</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <input type="button" class="btn btn-danger" value="Eliminar este horario" />
+                    </div>
+                </div>
+            </div>
+        </div>

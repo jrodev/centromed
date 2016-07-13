@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <?php echo $this->partial('renders/_head', array()) ?>
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <div id="header">
+                <?php echo $this->partial('renders/_header', array());?>
+            </div>
+            <div id="breadcrumb"></div>
+            <div id="content">
+                <?php echo $this->content;?>
+            </div>
+            <div id="footer">
+                <?php echo $this->partial('renders/_footer', array()) ?>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            $.fancybox.open([{href:'img/popup.jpg'}], {padding:0});
+            $(document).ready(function(){
+                $('#coin-slider').coinslider({ width:950, height:280, delay:3000, effect:'rain',sDelay:30, links :false });
+            });
+        </script>
+
+        <script type="text/javascript" src="http://analytics.aweber.com/js/awt_analytics.js?id=2AFU"></script>
+        <script type="text/javascript">
+            setTimeout(function(){var a=document.createElement("script");
+            var b=document.getElementsByTagName('script')[0];
+            a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0012/7299.js?"+Math.floor(new Date().getTime()/3600000);
+            a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+        </script>
+ 
+    </body>
+</html>

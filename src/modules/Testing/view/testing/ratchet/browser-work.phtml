@@ -1,0 +1,12 @@
+<h3>Trabajando con WebSocket</h3>
+<script>
+var conn = new WebSocket('ws://localhost:8089');
+conn.onopen = function(e) {
+    console.log("Connection established!");
+};
+
+conn.onmessage = function(e) {
+    console.log(e.data);
+};
+</script>
+<p>Abrir la consola f12</p>

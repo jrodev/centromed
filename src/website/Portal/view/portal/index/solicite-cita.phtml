@@ -1,0 +1,106 @@
+
+                <div id="content-content">
+                    <div id="columna1">
+                        <div id="nube" class="desaparecer">
+                            <div style="margin-top:30px;width:250px;margin-left:30px;" id="tex-nube">
+                                <p>Por favor completa de manera
+                                    correcta el siguiente formulario 
+                                    y separa tu cita.
+                                </p>
+                            </div>
+                        </div> 
+                        <div id="img" class="desaparecer"><img src="images/cita.png" width="324" height="468" alt="Terapia Fisica en Lima" /></div>
+
+                    </div>
+                    <div id="columna2">
+                     
+                        <div style="margin-left:25px;margin-top:40px;" id="titulo-int">
+                            <h1>SOLICITA UNA CITA</h1>
+                        </div>
+                        <div style="display:block; clear:both;">
+                            Reserva tu  cita con S/. 35 soles
+                            
+                        </div>
+                        <div id="formulario">
+                            <form id="form_contac" name="form_contac" action="solicita-una-cita-enviar.php" method="post" style="width:530px; float:left;margin-left:20px;height:20px;">
+                                <h2 style="padding: 25px 0 5px 3px;">PACIENTE</h2>
+                                <span id="sprytextfield1">
+                                    <label for="nombres-ap"></label>
+                                    <input type="text" name="nombres-ap" id="nombres-ap" class="celda1"/>
+                                    <div class="asterisco">*</div>
+                                </span> <span id="sprytextfield2">
+                                    <label for="distrito"></label>
+                                    <input type="text" name="distrito" id="distrito" class="celda2" />
+                                    <div class="asterisco">*</div>
+                                </span> <span id="sprytextfield3">
+                                    <label for="edad"></label>
+                                    <input type="text" name="edad" id="edad" class="celda2"/>
+                                    <div class="asterisco">*</div>
+                                </span> <span id="sprytextfield4">
+                                    <label for="email"></label>
+                                    <input type="text" name="email" id="email" class="celda2"/>
+                                    <div class="asterisco">*</div>
+                                </span> <span id="sprytextfield5">
+                                    <label for="telefono"></label>
+                                    <input type="text" name="telefono" id="telefono-cita" class="celda2"/>
+                                    <div class="asterisco">*</div>
+                                </span>
+                                <h2 style="padding: 25px 0 5px 3px;">MOTIVO DE CITA</h2>
+                                <span id="spryselect1">
+                                    <label for="motivo"></label>
+                                    <select name="motivo" class="celda3" id="motivo">
+                                        <option selected="selected" value="">Particular / Seguro</option>
+                                        <option value="Sin Seguro / Particular">Sin Seguro / Particular</option>
+                                        <option value="Pacífico EPS">Pacífico EPS</option>
+                                        <option value="Pacífico Seguros">Pacífico Seguros</option>
+
+                                        <option value="Rímac Seguros">Rímac Seguros</option>
+                                        <option value="Mapfre">Mapfre</option>
+                                        <option value="La Positiva">La Positiva</option>
+                                    </select>
+                                    <div class="asterisco">*</div>
+                                </span>
+                                <p style="width: 460px; margin: 0; padding: 12px 0 0 3px;">Fecha de cita: (Opción en función a cupos de médicos disponibles)</p>
+                                <span id="sprytextfield6">
+                                    <label for="fecha"></label>
+                                    <input type="text" name="fecha" id="fecha" class="celda2"/>
+                                    <div class="asterisco">*</div>
+                                </span> <span id="spryselect2">
+                                    <label for="horario"></label>
+                                    <select name="horario" id="horario-cita" class="celda4">
+                                        <option selected="selected">Horario:</option>
+                                        <optgroup label="Lunes a Viernes">
+                                            <option value="8:00am - 9:00am">8:00am - 9:00am</option>
+                                            <option value="9:00am - 10:00am">9:00am - 10:00am</option>
+                                            <option value="10:00am - 11:00am">10:00am - 11:00am</option>
+                                            <option value="11:00am - 12:00pm">11:00am - 12:00pm</option>
+                                            <option value="12:00pm - 1:00pm">12:00pm - 1:00pm</option>
+                                            <option value="1:00pm - 2:00pm">1:00pm - 2:00pm</option>
+                                            <option value="2:00pm - 3:00pm">2:00pm - 3:00pm</option>
+                                            <option value="3:00pm - 4:00pm">3:00pm - 4:00pm</option>
+                                            <option value="4:00pm - 5:00pm">4:00pm - 5:00pm</option>
+                                            <option value="5:00pm - 6:00pm">5:00pm - 6:00pm</option>
+                                            <option value="6:00pm - 7:00pm">6:00pm - 7:00pm</option>
+                                            <option value="7:00pm - 8:00pm">7:00pm - 8:00pm</option>
+                                            <option value="8:00pm - 9:00pm">8:00pm - 9:00pm</option>
+                                            <option value="9:00pm - 10:00pm">9:00pm - 10:00pm</option>
+                                        </optgroup>
+                                        <optgroup label="Sábado">
+                                            <option value="8:00am - 9:00am">8:00am - 9:00am</option>
+                                            <option value="9:00am - 10:00am">9:00am - 10:00am</option>
+                                            <option value="10:00am - 11:00am">10:00am - 11:00am</option>
+                                            <option value="11:00am - 12:00pm">11:00am - 12:00pm</option>
+                                        </optgroup>
+                                    </select>
+                                    <div class="asterisco">*</div>
+                                </span> <span id="sprytextarea1">
+                                    <label for="consulta"></label>
+                                    <textarea name="consulta" cols="45" rows="5" class="celda5" id="consulta"></textarea>
+                                    <div class="asterisco">*</div>
+                                    <p style="width: 450px; margin: 0; padding: 0 0 0 3px; font-size: 12px;">* Campos obligatorios</p>
+                                </span>
+                                <input type="image" src="images/enviar-boton.png" width="67" height="25" alt="" style="float:right; margin: 0px 15px 20px 0;"/>
+                            </form>
+                        </div>   
+                    </div>
+                </div>

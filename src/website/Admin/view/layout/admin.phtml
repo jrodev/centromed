@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <?php echo $this->partial('renders/_head-adm', array()) ?>
+    </head>
+    
+    <body class="skin-blue">
+        
+        <?php
+            $admLogin = $this->session('admin')->login();
+            $profile  = $this->session('admin')->profile();
+            $disabled = !$admLogin?'disabled':'';
+            $mca      = $this->portal('mca');
+        ?>        
+        
+        <!-- Site wrapper -->
+        <div class="wrapper">
+            
+            <header class="main-header">
+                <?php echo $this->partial('renders/_header-adm', array());?>
+            </header>
+            
+            <aside class="main-sidebar">
+                <?php echo $this->partial('renders/_aside-adm', array());?>
+            </aside>
+            
+            <div class="content-wrapper">
+
+                <section class="content-header">
+                    <h1>
+                        Gestion de Citas <small>Nueva</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
+                        <li><a href="#">citas</a></li>
+                        <li class="active">nueva</li>
+                    </ol>
+                </section>
+                
+                <section class="content">
+                    <?php echo $this->content;?>
+                </section>
+                
+            </div>
+
+            <?php echo $this->partial('renders/_footer-adm', array());?>
+            
+        </div>
+
+    </body>
+    
+</html>

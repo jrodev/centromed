@@ -1,0 +1,189 @@
+    
+                        <?php $BASE_URL = $this->portal('baseurl'); ?>
+                        <form id="searchCita" method="get" action="<?php echo $this->portal('baseurl')?>/admin/citas/5/4" class="form-inline" role="form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                                    </div>
+                                    <select class="form-control chosen-select">
+                                        <?php echo $sede?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                    </div>
+                                    <select class="form-control chosen-select">
+                                        <?php echo $espc?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                    </div>
+                                    <input name="daterange" type="text" class="form-control" value="<?php echo ($this->dia=='0')?"":$this->dia?>" readonly />
+                                    <!--select class="form-control chosen-disabled chosen-select">
+                                        <?php //echo $dias?>
+                                    </select-->
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                                    </div>
+                                    <input type="text" name="text" class="form-control" value="<?php echo $this->text?>" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default">BUSCAR</button>
+                            </div>
+                            <!--input type="hidden" name="page" value="<?php echo $this->pag?>" /-->
+                        </form>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Sede</th>
+                                        <th>Especialidad</th>
+                                        <th>Fecha y hora</th>
+                                        <th>Cliente</th>
+                                        <th>Reangendar</th>
+                                        <th colspan="2">Estado pago</th>
+                                        <th>Estado cita</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="items">
+                                    <?php
+                                        $logoPay = ['','visa.png','master-card.png','safety-pay.png','pebig.jpg','adm.jpg'];
+                                        $estPay  = ['','Pendiente','pagado','reembolso'];
+                                        $clrPay  = ['','orange','green','red'];
+
+                                        $estCit  = ['','Pendiente','Atendido','Postergado','Cancelado'];
+                                        $lblCit  = ['','info','success','warning','danger'];
+                                    ?>
+                                    <?php foreach($this->citas as $cita): ?>
+                                    <tr>
+                                        <?php
+                                        $srcLogo = $BASE_URL.'/img/logos/'.$logoPay[(int)$cita['pago']];
+                                        $isRagen = (bool)(int)trim($cita['reagen']);
+                                        ?>
+                                        <td><?php echo $cita['id']?></td>
+                                        <td><?php echo explode(' - ',$cita['nom'])[1]?></td>
+                                        <td><?php echo $cita['esp']?></td>
+                                        <td><?php echo $cita['hora']?></td>
+                                        <td>
+                                            <a data-target="#bstrModal" href="#register" data-toggle="modal" data-whatever='<?php echo $cita['idusu']?>'>
+                                                <?php echo $cita['cli']?>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-default right <?php /*if ($isRagen) { ?>disabled<?php }*/ ?>" href="#" role="button" data-toggle="modal" href="#" data-target="#bstrModalReagendar" id-usu='<?php echo $cita['idusu']?>' data-whatever="<?php echo $cita['id'] ?>">
+                                                <?php if (FALSE && $isRagen) { ?>Cambiado<?php } else { ?>Cambiar<?php } ?>
+                                            </a>
+                                        </td>
+                                        <td><img src="<?php echo $srcLogo?>" height="30px" /></td>
+                                        <td style="font-weight:bolder; color:<?php echo $clrPay[(int)$cita['estpago']] ?>">
+                                            <?php echo $estPay[(int)$cita['estpago']]?>
+                                        </td>
+                                        <td>
+                                            <div id="btnEst<?php echo $cita['id']?>" class="btn-group">
+                                                <button type="button" class="btn btn-<?php echo $lblCit[(int)$cita['estcita']] ?>">
+                                                    <?php echo $estCit[(int)$cita['estcita']]?>
+                                                </button>
+                                                <button type="button" class="btn btn-<?php echo $lblCit[(int)$cita['estcita']] ?> dropdown-toggle" data-toggle="dropdown" style="height:31px;" aria-expanded="false">
+                                                    <span class="caret"></span>
+                                                    <span class="sr-only">Toggle Dropdown</span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <?php for($i=1; $i<=4; $i++):?>
+                                                    <li <?php if((int)$cita['estcita']==$i){?>class="disabled"<?php }?>>
+                                                        <a href="#" idcita='<?php echo $cita['id']?>' estcita='<?php echo $i?>' prevest='<?php echo $cita['estcita']?>'>
+                                                            <?php echo $estCit[$i]?>
+                                                        </a>
+                                                    </li>
+                                                    <?php endfor;?>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <?php endforeach;?>
+                                </tbody>
+                            </table>
+
+                            <div class="row">
+                                <!--div class="col-md-4 col-md-offset-4 text-center"-->
+                                    <?php
+                                        $cantRows = (int)$this->cant[0]['count'];
+                                        $page = (int)$this->pag;
+                                        $cantByPage = 8;
+                                        $resto = $cantRows%$cantByPage; 
+                                        $cantPages = (int)($cantRows/$cantByPage);
+                                        $cantPages = $cantPages+($resto?1:0);
+                                    ?>
+                                    <nav class="text-center">
+                                        <?php
+                                        $href = "/admin/citas/{$this->idsede}/{$this->esp}/{$this->dia}/";
+                                        $prev = $href.( ($page>1)?($page-1):1 )."/{$this->text}";
+                                        $next = $href.( ($page<$cantPages)?($page+1):$page )."/{$this->text}";
+                                        ?>
+                                        <ul class="pagination">
+                                            <li <?php if($page==1){?>class="disabled"<?php }?>>
+                                                <a href="<?php echo $prev?>">«</a>
+                                            </li>
+                                            <?php
+                                            for($i=1; $i<=$cantPages; $i++):
+                                                
+                                            ?>
+                                            <?php $active = ($i==$page)?' class="active"':''; ?>
+                                            <li<?php echo $active?>>
+                                                <a href="<?php echo $href.$i."/{$this->text}"?>"><?php echo $i?>
+                                                    <span class="sr-only">(current)</span>
+                                                </a>
+                                            </li>
+                                            <?php endfor;?>
+                                            <li <?php if($page==$cantPages){?>class="disabled"<?php }?>>
+                                                <a href="<?php echo $next?>">»</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                <!--/div-->
+                            </div>
+                        </div>
+
+                        <div class="modal fade bs-modal-sm" id="bstrModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" style="width:550px;">
+                                <div class="modal-content" style="padding: 0px 18px">
+                                    <br />
+                                    <?php echo $this->partial('usuario/registrar', array('formreg'=>$this->formreg)) ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal Re-agendar -->
+                        <div class="modal fade bs-modal-sm" id="bstrModalReagendar" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Re-Agendar cita</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="contReagendar">
+                                            <?php echo $this->partial('usuario/reagendar', array('formcita'=>$this->formcita,'days'=>$this->days));  ?>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        <button id="btnReagendar" type="button" class="btn btn-primary" disabled>Reagendar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>

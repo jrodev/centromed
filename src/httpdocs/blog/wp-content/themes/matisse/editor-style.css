@@ -1,0 +1,214 @@
+/*
+ Theme Name: Matisse
+ */
+/*
+ Used to style the TinyMCE editor.
+ */
+html .mceContentBody {
+	max-width: 620px;
+}
+hr {
+	background-color: #e7e7e7;
+	border: 0;
+	height: 1px;
+	margin-bottom: 18px;
+	clear: both;
+}
+/* Text elements */
+body {
+	font: 14px  /1.5 Georgia, "Times New Roman", Times, serif;
+	color: #000;
+	background: #fff;
+}
+p {
+	font-size: 1em;
+	margin: 0 0 1em 0;
+	text-indent: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	color: #7F7F7F;
+	clear: both
+}
+h1, h2 {
+	font-size: 24px;
+	margin: 0.76em 0 0.30em 0;
+}
+h3 {
+	font-size: 1.43em;
+	margin: 0.76em 0 0.30em 0;
+}
+h4 {
+	font-size: 1.29em;
+	margin: 0.76em 0 0.30em 0;
+}
+h5 {
+	font-size: 1.14em;
+	margin: 0.76em 0;
+	font-style: italic;
+}
+h6 {
+	font-size: 1em;
+	margin: 0.76em 0;
+	font-style: italic;
+}
+a {
+	color: #AF3E00;
+}
+a:hover {
+	color: #7D7D7D
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+blockquote, q {
+	quotes: none;
+	margin: 0;
+}
+blockquote {
+	background: url(images/icons.png) no-repeat -400px 10px;
+	padding: 10px 30px;
+	color: #777;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+}
+address {
+	margin: 1em 0;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-family: Consolas, "Courier New", Courier, monospace;
+	border: none!important;
+}
+td, th {
+	padding: 2px 4px;
+	border: 1px solid #aaa!important;
+}
+th {
+	background: #eee;
+	text-align: left;
+}
+pre {
+	font: 14px Consolas, Lucida Console, Monaco, monospace;
+	color: #222;
+	background: #eee;
+	padding: 10px;
+	overflow: auto;
+}
+code {
+	font: 14px Consolas, Lucida Console, Monaco, monospace;
+	color: #777;
+	overflow: auto;
+}
+sup, sub {
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: 0.5ex;
+}
+abbr {
+	cursor: help;
+}
+em, i {
+	font-style: italic
+}
+strong, b {
+	font-weight: bold;
+}
+dt {
+	font-weight: bold
+}
+dd:before {
+	content: " - ";
+}
+dl, dt, dd {
+	padding: 0;
+	margin: 0;
+}
+ul, ol {
+	list-style: square;
+	margin: 0 0 1em 20px;
+	padding: 0;
+}
+ul ul {
+	list-style: disc;
+	margin: 0 10px;
+}
+ul ul ul {
+	list-style: circle
+}
+ol {
+	list-style: decimal
+}
+ol ol {
+	list-style: upper-latin;
+	margin: 0 10px;
+}
+ol ol ol {
+	list-style: lower-alpha;
+}
+img {
+	margin: 0;
+	max-width: 600px;
+}
+.wp-caption-text {
+	margin: 0 5px 15px;
+}
+.wp-caption {
+	font: 11px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-align: left;
+	max-width: 620px !important;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+}
+.wp-caption dt:before {
+	content: "";
+}
+.wp-caption dt {
+	margin: 0;
+}
+.wp-caption img {
+	max-width: 610px;
+	padding: 0;
+}
+.gallery br {
+	clear: both
+}
+.entry-caption, .entry-attachment {
+	margin: 10px;
+}
+.entry-caption {
+	text-align: center;
+}
+.alignleft, img.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 10px;
+	margin-top: 4px;
+}
+.alignright, img.alignright {
+	display: inline;
+	float: right;
+	margin-left: 10px;
+	margin-top: 4px;
+}
+.aligncenter, img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

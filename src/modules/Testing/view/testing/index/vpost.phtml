@@ -1,0 +1,42 @@
+<h3>vpost Index for Testing</h3>
+<form name="frmSolicitudPago" method="post"
+      action="https://test2.alignetsac.com/VPOS2G/faces/pages/startPayme.xhtml">
+    <input type="hidden" name="acquirerId" value="144" />
+    <input type="hidden" name="idCommerce" value="7078" />
+    <input type="hidden" name="purchaseOperationNumber" value="<?=$this->purchaseOperationNumber?>" />
+    <input type="hidden" name="purchaseAmount" value="<?=$this->purchaseAmount?>" />
+    <input type="hidden" name="purchaseCurrencyCode" value="<?=$this->purchaseCurrencyCode?>" />
+    <input type="hidden" name="language" value="SP" />
+    
+    <input type="hidden" name="billingFirstName" value="Juan" />
+    <input type="hidden" name="billingLastName" value="0001" />
+    <input type="hidden" name="billingEMail" value="billing@onemail.com" />
+    <input type="hidden" name="billingAddress" value="0001" />
+    <input type="hidden" name="billingZIP" value="0001" />
+    <input type="hidden" name="billingCity" value="0001" />
+    <input type="hidden" name="billingState" value="0001" />
+    <input type="hidden" name="billingCountry" value="0001" />
+    <input type="hidden" name="billingPhone" value="0001" />
+
+    <input type="hidden" name="shippingFirstName" value="Jaime" />
+    <input type="hidden" name="shippingLastName" value="Rodri" />
+    <input type="hidden" name="shippingEmail" value="shipping@othermail.com" />
+    <input type="hidden" name="shippingAddress" value="lima rimac" />
+    <input type="hidden" name="shippingZIP" value="0001" />
+    <input type="hidden" name="shippingCity" value="lima" />
+    <input type="hidden" name="shippingState" value="lima" />
+    <input type="hidden" name="shippingCountry" value="0001" />
+    <input type="hidden" name="shippingPhone" value="9854758" />
+    
+    <input type="hidden" name="descriptionProducts" value="0001" />
+    <input type="hidden" name="programmingLanguage" value="PHP" />
+    <input type="hidden" name="commerceAssociated" value="CENTRO OSI" />
+    <input type="hidden" name="userCommerce" value="00001" />
+    <input type="hidden" name="userCodePayme" value="37--72--1515" />
+    <input type="hidden" name="mcc" value="517" />
+    
+
+     
+
+    <input type="submit" value="PAGAR" />
+</form>

@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /cgi-bin/
+Disallow: /img/
+Disallow: /back
+Disallow: /bk_061211
+Disallow: /fb
+Disallow: /popup
+Disallow: /sist

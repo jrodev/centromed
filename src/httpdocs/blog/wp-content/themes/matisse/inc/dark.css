@@ -1,0 +1,86 @@
+/*
+ A dark color scheme
+ */
+/* =Global
+ ----------------------------------------------- */
+body {
+    background: #333;
+    color: #eee
+}
+
+.container_12 {
+    background: #333;
+}
+
+#nav, #nav ul {
+    background: #eee !important;
+}
+
+#nav a {
+    background: #eee;
+	color:#333
+}
+
+#nav a:hover {
+    background: #eee;
+	color:#666
+}
+
+#nav .current_page_item a, #nav .current-menu-item a {
+    background: #aaa;
+}
+article footer {
+    border-bottom: 1px solid #555;
+}
+
+.image-thumb, .commentlist .pingback p, .commentlist .trackback p {
+    border: 1px solid #555;
+}
+
+.page-link a, .post-edit-link,.reply a,  th {
+    background: #555;
+}
+
+#comments .byuser .comment-author{
+	border:1px solid #FFA26F
+}
+.wp-pagenavi a {
+    border: 0 !important;
+    background: transparent !important;
+    margin: 0 10px 0 0 !important;
+}
+
+.linkpage a {
+    background: #EFEFEF;
+}
+
+.wp-pagenavi .pages, .wp-pagenavi .current {
+    background: #333 !important;
+    border: 1px solid #666 !important;
+}
+
+#author-info, .comment-author{
+    background: #666;
+}
+
+#author-info h2, .title span {
+    color:#eee
+}
+
+#respond {
+    background: #333;
+}
+
+#comments h3 strong {
+    color: #fff;
+}
+
+.widget_pages li, .widget_categories li, .widget_archive li, .widget_meta li, .widget_links li, .widget_recent_comments li, .widget_nav_menu li, .widget_recent_entries li {
+    color: #888;
+    list-style: disc;
+    margin-left: 15px;
+}
+
+#slides, #footer{
+	color:#333;
+}

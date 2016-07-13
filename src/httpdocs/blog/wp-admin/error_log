@@ -1,0 +1,734 @@
+[30-Dec-2011 17:25:02] PHP Warning:  file_get_contents(http:) [<a href='function.file-get-contents'>function.file-get-contents</a>]: failed to open stream: No such file or directory in /home/centrome/public_html/blog/wp-includes/class-feed.php on line 88
+[30-Dec-2011 19:52:52] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugins
+    [id] => plugins
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Overview
+                    [id] => overview
+                    [content] => <p>Plugins extend and expand the functionality of WordPress. Once a plugin is installed, you may activate it or deactivate it here.</p><p>You can find additional plugins for your site by using the <a href="plugin-install.php">Plugin Browser/Installer</a> functionality or by browsing the <a href="http://wordpress.org/extend/plugins/" target="_blank">WordPress Plugin Directory</a> directly and installing new plugins manually. To manually install a plugin you generally just need to upload the plugin file into your <code>/wp-content/plugins</code> directory. Once a plugin has been installed, you can activate it here.</p>
+                    [callback] => 
+                )
+
+            [1] => Array
+                (
+                    [title] => Troubleshooting
+                    [id] => compatibility-problems
+                    [content] => <p>Most of the time, plugins play nicely with the core of WordPress and with other plugins. Sometimes, though, a plugin&#8217;s code will get in the way of another plugin, causing compatibility issues. If your site starts doing strange things, this may be the problem. Try deactivating all your plugins and re-activating them in various combinations until you isolate which one(s) caused the issue.</p><p>If something goes wrong with a plugin and you can&#8217;t use WordPress, delete or rename that file in the <code>/home/centrome/public_html/blog/wp-content/plugins</code> directory and it will be automatically deactivated.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Managing_Plugins#Plugin_Management" target="_blank">Documentation on Managing Plugins</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+            [per_page] => Array
+                (
+                    [label] => Plugins
+                    [default] => 999
+                )
+
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 19:53:07] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugins_page_ingboo_facebook_like_menu
+    [id] => plugins_page_ingboo_facebook_like_menu
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+        )
+
+    [_help_sidebar:private] => 
+    [_options:private] => Array
+        (
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 19:56:41] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugins_page_ingboo_facebook_like_menu
+    [id] => plugins_page_ingboo_facebook_like_menu
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+        )
+
+    [_help_sidebar:private] => 
+    [_options:private] => Array
+        (
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:00:34] ingboo-api-error: url=[http://www.ingboo.com/api/partner/like?username=andresms15@gmail.com&password=05112184&href=http%3A%2F%2Fcentromedicoosi.com%2Fblog%2F%3Ffeed%3Drss2&im=http%3A%2F%2Fcentromedicoosi.com%2F%23] httpCode[500] httpErrorText[curlErrorCode:0 curlErrorText:] expected[xml] but got [text/html; charset=iso-8859-1]. response[<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>500 Internal Server Error</title>
+</head><body>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error or
+misconfiguration and was unable to complete
+your request.</p>
+<p>Please contact the server administrator,
+ admin@ingboo.com and inform them of the time the error occurred,
+and anything you might have done that may have
+caused the error.</p>
+<p>More information about this error may be available
+in the server error log.</p>
+</body></html>
+]
+[30-Dec-2011 20:00:34] Exception: exception 'IngbooRestClientException' with message 'Error occurred in Communicating with IngBoo Server. Internal Server Error' in /home/centrome/public_html/blog/wp-content/plugins/like-for-tags/ingboo.php:157
+Stack trace:
+#0 /home/centrome/public_html/blog/wp-content/plugins/like-for-tags/ingboo.php(95): IngBoo->check_exception(Resource id #110, '<!DOCTYPE HTML ...', 'xml', 104, NULL)
+#1 /home/centrome/public_html/blog/wp-content/plugins/like-for-tags/ingboo-facebook-like.php(325): IngBoo->mk_pulse('http://centrome...', 'andresms15@gmai...', '05112184', 'http://centrome...')
+#2 /home/centrome/public_html/blog/wp-includes/plugin.php(405): IngbooFacebookLike->doPartnerUpdate(Array)
+#3 /home/centrome/public_html/blog/wp-includes/functions.php(559): do_action(Array, Array)
+#4 /home/centrome/public_html/blog/wp-admin/options.php(149): update_option('update_option_i...', Array, Array)
+#5 {main}
+[30-Dec-2011 20:00:34] WordPress database error MySQL server has gone away for query UPDATE `wp_options` SET `option_value` = 'a:21:{s:9:\"partnerId\";s:4:\"7081\";s:7:\"pulseId\";s:1:\"0\";s:12:\"partnerEmail\";s:20:\"andresms15@gmail.com\";s:15:\"partnerPassword\";s:8:\"05112184\";s:8:\"imageRef\";s:28:\"http://centromedicoosi.com/#\";s:8:\"use_tags\";s:2:\"no\";s:12:\"layout_style\";s:8:\"standard\";s:10:\"show_faces\";s:3:\"yes\";s:5:\"width\";s:3:\"450\";s:4:\"verb\";s:4:\"like\";s:4:\"font\";s:5:\"arial\";s:12:\"color_scheme\";s:5:\"light\";s:8:\"position\";s:5:\"below\";s:5:\"index\";s:3:\"yes\";s:4:\"post\";s:3:\"yes\";s:4:\"page\";s:2:\"no\";s:7:\"archive\";s:3:\"yes\";s:7:\"excerpt\";s:2:\"no\";s:7:\"useCode\";s:2:\"no\";s:9:\"useIframe\";s:2:\"no\";s:9:\"lastError\";s:73:\"Error occurred in Communicating with IngBoo Server. Internal Server Error\";}' WHERE `option_name` = 'ingboo-facebook-like' made by update_option, do_action, call_user_func_array, IngbooFacebookLike->doPartnerUpdate, update_option
+[30-Dec-2011 20:00:34] WordPress database error MySQL server has gone away for query SELECT option_value FROM wp_options WHERE option_name = '_transient_settings_errors' LIMIT 1 made by set_transient, get_option
+[30-Dec-2011 20:00:34] WordPress database error MySQL server has gone away for query SELECT option_value FROM wp_options WHERE option_name = '_transient_timeout_settings_errors' LIMIT 1 made by set_transient, add_option, get_option
+[30-Dec-2011 20:00:34] WordPress database error MySQL server has gone away for query INSERT INTO `wp_options` (`option_name`, `option_value`, `autoload`) VALUES ('_transient_timeout_settings_errors', '1325275264', 'no') ON DUPLICATE KEY UPDATE `option_name` = VALUES(`option_name`), `option_value` = VALUES(`option_value`), `autoload` = VALUES(`autoload`) made by set_transient, add_option
+[30-Dec-2011 20:00:34] WordPress database error MySQL server has gone away for query INSERT INTO `wp_options` (`option_name`, `option_value`, `autoload`) VALUES ('_transient_settings_errors', 'a:1:{i:0;a:4:{s:7:\"setting\";s:7:\"general\";s:4:\"code\";s:16:\"settings_updated\";s:7:\"message\";s:15:\"Settings saved.\";s:4:\"type\";s:7:\"updated\";}}', 'no') ON DUPLICATE KEY UPDATE `option_name` = VALUES(`option_name`), `option_value` = VALUES(`option_value`), `autoload` = VALUES(`autoload`) made by set_transient, add_option
+[30-Dec-2011 20:00:34] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugins_page_ingboo_facebook_like_menu
+    [id] => plugins_page_ingboo_facebook_like_menu
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+        )
+
+    [_help_sidebar:private] => 
+    [_options:private] => Array
+        (
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:02:52] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => edit
+    [id] => edit-post
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => edit
+    [parent_file] => edit.php
+    [post_type] => post
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Overview
+                    [id] => overview
+                    [content] => <p>This screen provides access to all of your posts. You can customize the display of this screen to suit your workflow.</p>
+                    [callback] => 
+                )
+
+            [1] => Array
+                (
+                    [title] => Screen Content
+                    [id] => screen-content
+                    [content] => <p>You can customize the display of this screen&#8217;s contents in a number of ways:</p><ul><li>You can hide/display columns based on your needs and decide how many posts to list per screen using the Screen Options tab.</li><li>You can filter the list of posts by post status using the text links in the upper left to show All, Published, Draft, or Trashed posts. The default view is to show all posts.</li><li>You can view posts in a simple title list or with an excerpt. Choose the view you prefer by clicking on the icons at the top of the list on the right.</li><li>You can refine the list to show only posts in a specific category or from a specific month by using the dropdown menus above the posts list. Click the Filter button after making your selection. You also can refine the list by clicking on the post author, category or tag in the posts list.</li></ul>
+                    [callback] => 
+                )
+
+            [2] => Array
+                (
+                    [title] => Available Actions
+                    [id] => action-links
+                    [content] => <p>Hovering over a row in the posts list will display action links that allow you to manage your post. You can perform the following actions:</p><ul><li><strong>Edit</strong> takes you to the editing screen for that post. You can also reach that screen by clicking on the post title.</li><li><strong>Quick Edit</strong> provides inline access to the metadata of your post, allowing you to update post details without leaving this screen.</li><li><strong>Trash</strong> removes your post from this list and places it in the trash, from which you can permanently delete it.</li><li><strong>Preview</strong> will show you what your draft post will look like if you publish it. View will take you to your live site to view the post. Which link is available depends on your post&#8217;s status.</li></ul>
+                    [callback] => 
+                )
+
+            [3] => Array
+                (
+                    [title] => Bulk Actions
+                    [id] => bulk-actions
+                    [content] => <p>You can also edit or move multiple posts to the trash at once. Select the posts you want to act on using the checkboxes, then select the action you want to take from the Bulk Actions menu and click Apply.</p><p>When using Bulk Edit, you can change the metadata (categories, author, etc.) for all selected posts at once. To remove a post from the grouping, just click the x next to its name in the Bulk Edit area that appears.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Posts_Screen" target="_blank">Documentation on Managing Posts</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+            [per_page] => Array
+                (
+                    [label] => Posts
+                    [default] => 20
+                )
+
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:03:24] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => post
+    [id] => post
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => edit
+    [parent_file] => edit.php
+    [post_type] => post
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Customizing This Display
+                    [id] => customize-display
+                    [content] => <p>The title field and the big Post Editing Area are fixed in place, but you can reposition all the other boxes using drag and drop, and can minimize or expand them by clicking the title bar of each box. Use the Screen Options tab to unhide more boxes (Excerpt, Send Trackbacks, Custom Fields, Discussion, Slug, Author) or to choose a 1- or 2-column layout for this screen.</p>
+                    [callback] => 
+                )
+
+            [1] => Array
+                (
+                    [title] => Title and Post Editor
+                    [id] => title-post-editor
+                    [content] => <p><strong>Title</strong> - Enter a title for your post. After you enter a title, you&#8217;ll see the permalink below, which you can edit.</p><p><strong>Post editor</strong> - Enter the text for your post. There are two modes of editing: Visual and HTML. Choose the mode by clicking on the appropriate tab. Visual mode gives you a WYSIWYG editor. Click the last icon in the row to get a second row of controls. The HTML mode allows you to enter raw HTML along with your post text. You can insert media files by clicking the icons above the post editor and following the directions. You can go to the distraction-free writing screen via the Fullscreen icon in Visual mode (second to last in the top row) or the Fullscreen button in HTML mode (last in the row). Once there, you can make buttons visible by hovering over the top area. Exit Fullscreen back to the regular post editor.</p>
+                    [callback] => 
+                )
+
+            [2] => Array
+                (
+                    [title] => Publish Box
+                    [id] => publish-box
+                    [content] => <p><strong>Publish</strong> - You can set the terms of publishing your post in the Publish box. For Status, Visibility, and Publish (immediately), click on the Edit link to reveal more options. Visibility includes options for password-protecting a post or making it stay at the top of your blog indefinitely (sticky). Publish (immediately) allows you to set a future or past date and time, so you can schedule a post to be published in the future or backdate a post.</p><p><strong>Featured Image</strong> - This allows you to associate an image with your post without inserting it. This is usually useful only if your theme makes use of the featured image as a post thumbnail on the home page, a custom header, etc.</p>
+                    [callback] => 
+                )
+
+            [3] => Array
+                (
+                    [title] => Discussion Settings
+                    [id] => discussion-settings
+                    [content] => <p><strong>Send Trackbacks</strong> - Trackbacks are a way to notify legacy blog systems that you&#8217;ve linked to them. Enter the URL(s) you want to send trackbacks. If you link to other WordPress sites they&#8217;ll be notified automatically using pingbacks, and this field is unnecessary.</p><p><strong>Discussion</strong> - You can turn comments and pings on or off, and if there are comments on the post, you can see them here and moderate them.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p>You can also create posts with the <a href="options-writing.php">Press This bookmarklet</a>.</p><p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Posts_Add_New_Screen" target="_blank">Documentation on Writing and Editing Posts</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+            [layout_columns] => Array
+                (
+                    [max] => 2
+                    [default] => 2
+                )
+
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:03:30] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => post
+    [id] => post
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => edit
+    [parent_file] => edit.php
+    [post_type] => post
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Customizing This Display
+                    [id] => customize-display
+                    [content] => <p>The title field and the big Post Editing Area are fixed in place, but you can reposition all the other boxes using drag and drop, and can minimize or expand them by clicking the title bar of each box. Use the Screen Options tab to unhide more boxes (Excerpt, Send Trackbacks, Custom Fields, Discussion, Slug, Author) or to choose a 1- or 2-column layout for this screen.</p>
+                    [callback] => 
+                )
+
+            [1] => Array
+                (
+                    [title] => Title and Post Editor
+                    [id] => title-post-editor
+                    [content] => <p><strong>Title</strong> - Enter a title for your post. After you enter a title, you&#8217;ll see the permalink below, which you can edit.</p><p><strong>Post editor</strong> - Enter the text for your post. There are two modes of editing: Visual and HTML. Choose the mode by clicking on the appropriate tab. Visual mode gives you a WYSIWYG editor. Click the last icon in the row to get a second row of controls. The HTML mode allows you to enter raw HTML along with your post text. You can insert media files by clicking the icons above the post editor and following the directions. You can go to the distraction-free writing screen via the Fullscreen icon in Visual mode (second to last in the top row) or the Fullscreen button in HTML mode (last in the row). Once there, you can make buttons visible by hovering over the top area. Exit Fullscreen back to the regular post editor.</p>
+                    [callback] => 
+                )
+
+            [2] => Array
+                (
+                    [title] => Publish Box
+                    [id] => publish-box
+                    [content] => <p><strong>Publish</strong> - You can set the terms of publishing your post in the Publish box. For Status, Visibility, and Publish (immediately), click on the Edit link to reveal more options. Visibility includes options for password-protecting a post or making it stay at the top of your blog indefinitely (sticky). Publish (immediately) allows you to set a future or past date and time, so you can schedule a post to be published in the future or backdate a post.</p><p><strong>Featured Image</strong> - This allows you to associate an image with your post without inserting it. This is usually useful only if your theme makes use of the featured image as a post thumbnail on the home page, a custom header, etc.</p>
+                    [callback] => 
+                )
+
+            [3] => Array
+                (
+                    [title] => Discussion Settings
+                    [id] => discussion-settings
+                    [content] => <p><strong>Send Trackbacks</strong> - Trackbacks are a way to notify legacy blog systems that you&#8217;ve linked to them. Enter the URL(s) you want to send trackbacks. If you link to other WordPress sites they&#8217;ll be notified automatically using pingbacks, and this field is unnecessary.</p><p><strong>Discussion</strong> - You can turn comments and pings on or off, and if there are comments on the post, you can see them here and moderate them.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p>You can also create posts with the <a href="options-writing.php">Press This bookmarklet</a>.</p><p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Posts_Add_New_Screen" target="_blank">Documentation on Writing and Editing Posts</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+            [layout_columns] => Array
+                (
+                    [max] => 2
+                    [default] => 2
+                )
+
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:04:19] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugins
+    [id] => plugins
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Overview
+                    [id] => overview
+                    [content] => <p>Plugins extend and expand the functionality of WordPress. Once a plugin is installed, you may activate it or deactivate it here.</p><p>You can find additional plugins for your site by using the <a href="plugin-install.php">Plugin Browser/Installer</a> functionality or by browsing the <a href="http://wordpress.org/extend/plugins/" target="_blank">WordPress Plugin Directory</a> directly and installing new plugins manually. To manually install a plugin you generally just need to upload the plugin file into your <code>/wp-content/plugins</code> directory. Once a plugin has been installed, you can activate it here.</p>
+                    [callback] => 
+                )
+
+            [1] => Array
+                (
+                    [title] => Troubleshooting
+                    [id] => compatibility-problems
+                    [content] => <p>Most of the time, plugins play nicely with the core of WordPress and with other plugins. Sometimes, though, a plugin&#8217;s code will get in the way of another plugin, causing compatibility issues. If your site starts doing strange things, this may be the problem. Try deactivating all your plugins and re-activating them in various combinations until you isolate which one(s) caused the issue.</p><p>If something goes wrong with a plugin and you can&#8217;t use WordPress, delete or rename that file in the <code>/home/centrome/public_html/blog/wp-content/plugins</code> directory and it will be automatically deactivated.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Managing_Plugins#Plugin_Management" target="_blank">Documentation on Managing Plugins</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+            [per_page] => Array
+                (
+                    [label] => Plugins
+                    [default] => 999
+                )
+
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:04:34] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugins
+    [id] => plugins
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Overview
+                    [id] => overview
+                    [content] => <p>Plugins extend and expand the functionality of WordPress. Once a plugin is installed, you may activate it or deactivate it here.</p><p>You can find additional plugins for your site by using the <a href="plugin-install.php">Plugin Browser/Installer</a> functionality or by browsing the <a href="http://wordpress.org/extend/plugins/" target="_blank">WordPress Plugin Directory</a> directly and installing new plugins manually. To manually install a plugin you generally just need to upload the plugin file into your <code>/wp-content/plugins</code> directory. Once a plugin has been installed, you can activate it here.</p>
+                    [callback] => 
+                )
+
+            [1] => Array
+                (
+                    [title] => Troubleshooting
+                    [id] => compatibility-problems
+                    [content] => <p>Most of the time, plugins play nicely with the core of WordPress and with other plugins. Sometimes, though, a plugin&#8217;s code will get in the way of another plugin, causing compatibility issues. If your site starts doing strange things, this may be the problem. Try deactivating all your plugins and re-activating them in various combinations until you isolate which one(s) caused the issue.</p><p>If something goes wrong with a plugin and you can&#8217;t use WordPress, delete or rename that file in the <code>/home/centrome/public_html/blog/wp-content/plugins</code> directory and it will be automatically deactivated.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Managing_Plugins#Plugin_Management" target="_blank">Documentation on Managing Plugins</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+            [per_page] => Array
+                (
+                    [label] => Plugins
+                    [default] => 999
+                )
+
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:05:02] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugin-editor
+    [id] => plugin-editor
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Overview
+                    [id] => overview
+                    [content] => <p>You can use the editor to make changes to any of your plugins&#8217; individual PHP files. Be aware that if you make changes, plugins updates will overwrite your customizations.</p><p>Choose a plugin to edit from the menu in the upper right and click the Select button. Click once on any file name to load it in the editor, and make your changes. Don&#8217;t forget to save your changes (Update File) when you&#8217;re finished.</p><p>The Documentation menu below the editor lists the PHP functions recognized in the plugin file. Clicking Lookup takes you to a web page about that particular function.</p><p>If you want to make changes but don&#8217;t want them to be overwritten when the plugin is updated, you may be ready to think about writing your own plugin. For information on how to edit plugins, write your own from scratch, or just better understand their anatomy, check out the links below.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Plugins_Editor_Screen" target="_blank">Documentation on Editing Plugins</a></p><p><a href="http://codex.wordpress.org/Writing_a_Plugin" target="_blank">Documentation on Writing Plugins</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:05:25] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugin-editor
+    [id] => plugin-editor
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Overview
+                    [id] => overview
+                    [content] => <p>You can use the editor to make changes to any of your plugins&#8217; individual PHP files. Be aware that if you make changes, plugins updates will overwrite your customizations.</p><p>Choose a plugin to edit from the menu in the upper right and click the Select button. Click once on any file name to load it in the editor, and make your changes. Don&#8217;t forget to save your changes (Update File) when you&#8217;re finished.</p><p>The Documentation menu below the editor lists the PHP functions recognized in the plugin file. Clicking Lookup takes you to a web page about that particular function.</p><p>If you want to make changes but don&#8217;t want them to be overwritten when the plugin is updated, you may be ready to think about writing your own plugin. For information on how to edit plugins, write your own from scratch, or just better understand their anatomy, check out the links below.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Plugins_Editor_Screen" target="_blank">Documentation on Editing Plugins</a></p><p><a href="http://codex.wordpress.org/Writing_a_Plugin" target="_blank">Documentation on Writing Plugins</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:05:29] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugins
+    [id] => plugins
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Overview
+                    [id] => overview
+                    [content] => <p>Plugins extend and expand the functionality of WordPress. Once a plugin is installed, you may activate it or deactivate it here.</p><p>You can find additional plugins for your site by using the <a href="plugin-install.php">Plugin Browser/Installer</a> functionality or by browsing the <a href="http://wordpress.org/extend/plugins/" target="_blank">WordPress Plugin Directory</a> directly and installing new plugins manually. To manually install a plugin you generally just need to upload the plugin file into your <code>/wp-content/plugins</code> directory. Once a plugin has been installed, you can activate it here.</p>
+                    [callback] => 
+                )
+
+            [1] => Array
+                (
+                    [title] => Troubleshooting
+                    [id] => compatibility-problems
+                    [content] => <p>Most of the time, plugins play nicely with the core of WordPress and with other plugins. Sometimes, though, a plugin&#8217;s code will get in the way of another plugin, causing compatibility issues. If your site starts doing strange things, this may be the problem. Try deactivating all your plugins and re-activating them in various combinations until you isolate which one(s) caused the issue.</p><p>If something goes wrong with a plugin and you can&#8217;t use WordPress, delete or rename that file in the <code>/home/centrome/public_html/blog/wp-content/plugins</code> directory and it will be automatically deactivated.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Managing_Plugins#Plugin_Management" target="_blank">Documentation on Managing Plugins</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+            [per_page] => Array
+                (
+                    [label] => Plugins
+                    [default] => 999
+                )
+
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:10:02] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugins
+    [id] => plugins
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Overview
+                    [id] => overview
+                    [content] => <p>Plugins extend and expand the functionality of WordPress. Once a plugin is installed, you may activate it or deactivate it here.</p><p>You can find additional plugins for your site by using the <a href="plugin-install.php">Plugin Browser/Installer</a> functionality or by browsing the <a href="http://wordpress.org/extend/plugins/" target="_blank">WordPress Plugin Directory</a> directly and installing new plugins manually. To manually install a plugin you generally just need to upload the plugin file into your <code>/wp-content/plugins</code> directory. Once a plugin has been installed, you can activate it here.</p>
+                    [callback] => 
+                )
+
+            [1] => Array
+                (
+                    [title] => Troubleshooting
+                    [id] => compatibility-problems
+                    [content] => <p>Most of the time, plugins play nicely with the core of WordPress and with other plugins. Sometimes, though, a plugin&#8217;s code will get in the way of another plugin, causing compatibility issues. If your site starts doing strange things, this may be the problem. Try deactivating all your plugins and re-activating them in various combinations until you isolate which one(s) caused the issue.</p><p>If something goes wrong with a plugin and you can&#8217;t use WordPress, delete or rename that file in the <code>/home/centrome/public_html/blog/wp-content/plugins</code> directory and it will be automatically deactivated.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Managing_Plugins#Plugin_Management" target="_blank">Documentation on Managing Plugins</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+            [per_page] => Array
+                (
+                    [label] => Plugins
+                    [default] => 999
+                )
+
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:10:15] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugin-install
+    [id] => plugin-install
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Overview
+                    [id] => overview
+                    [content] => <p>Plugins hook into WordPress to extend its functionality with custom features. Plugins are developed independently from the core WordPress application by thousands of developers all over the world. All plugins in the official <a href="http://wordpress.org/extend/plugins/" target="_blank">WordPress.org Plugin Directory</a> are compatible with the license WordPress uses. You can find new plugins to install by searching or browsing the Directory right here in your own Plugins section.</p>
+                    [callback] => 
+                )
+
+            [1] => Array
+                (
+                    [title] => Adding Plugins
+                    [id] => adding-plugins
+                    [content] => <p>If you know what you&#8217;re looking for, Search is your best bet. The Search screen has options to search the WordPress.org Plugin Directory for a particular Term, Author, or Tag. You can also search the directory by selecting a popular tags. Tags in larger type mean more plugins have been labeled with that tag.</p><p>If you just want to get an idea of what&#8217;s available, you can browse Featured, Popular, Newest, and Recently Updated plugins by using the links in the upper left of the screen. These sections rotate regularly.</p><p>If you want to install a plugin that you&#8217;ve downloaded elsewhere, click the Upload in the upper left. You will be prompted to upload the .zip package, and once uploaded, you can activate the new plugin.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Plugins_Add_New_Screen" target="_blank">Documentation on Installing Plugins</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:10:23] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugin-install
+    [id] => plugin-install
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Overview
+                    [id] => overview
+                    [content] => <p>Plugins hook into WordPress to extend its functionality with custom features. Plugins are developed independently from the core WordPress application by thousands of developers all over the world. All plugins in the official <a href="http://wordpress.org/extend/plugins/" target="_blank">WordPress.org Plugin Directory</a> are compatible with the license WordPress uses. You can find new plugins to install by searching or browsing the Directory right here in your own Plugins section.</p>
+                    [callback] => 
+                )
+
+            [1] => Array
+                (
+                    [title] => Adding Plugins
+                    [id] => adding-plugins
+                    [content] => <p>If you know what you&#8217;re looking for, Search is your best bet. The Search screen has options to search the WordPress.org Plugin Directory for a particular Term, Author, or Tag. You can also search the directory by selecting a popular tags. Tags in larger type mean more plugins have been labeled with that tag.</p><p>If you just want to get an idea of what&#8217;s available, you can browse Featured, Popular, Newest, and Recently Updated plugins by using the links in the upper left of the screen. These sections rotate regularly.</p><p>If you want to install a plugin that you&#8217;ve downloaded elsewhere, click the Upload in the upper left. You will be prompted to upload the .zip package, and once uploaded, you can activate the new plugin.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Plugins_Add_New_Screen" target="_blank">Documentation on Installing Plugins</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:12:17] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => update
+    [id] => update
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+        )
+
+    [_help_sidebar:private] => 
+    [_options:private] => Array
+        (
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[30-Dec-2011 20:12:22] Screen: WP_Screen Object
+(
+    [action] => 
+    [base] => plugins
+    [id] => plugins
+    [is_network] => 
+    [is_user] => 
+    [parent_base] => plugins
+    [parent_file] => plugins.php
+    [post_type] => 
+    [taxonomy] => 
+    [_help_tabs:private] => Array
+        (
+            [0] => Array
+                (
+                    [title] => Overview
+                    [id] => overview
+                    [content] => <p>Plugins extend and expand the functionality of WordPress. Once a plugin is installed, you may activate it or deactivate it here.</p><p>You can find additional plugins for your site by using the <a href="plugin-install.php">Plugin Browser/Installer</a> functionality or by browsing the <a href="http://wordpress.org/extend/plugins/" target="_blank">WordPress Plugin Directory</a> directly and installing new plugins manually. To manually install a plugin you generally just need to upload the plugin file into your <code>/wp-content/plugins</code> directory. Once a plugin has been installed, you can activate it here.</p>
+                    [callback] => 
+                )
+
+            [1] => Array
+                (
+                    [title] => Troubleshooting
+                    [id] => compatibility-problems
+                    [content] => <p>Most of the time, plugins play nicely with the core of WordPress and with other plugins. Sometimes, though, a plugin&#8217;s code will get in the way of another plugin, causing compatibility issues. If your site starts doing strange things, this may be the problem. Try deactivating all your plugins and re-activating them in various combinations until you isolate which one(s) caused the issue.</p><p>If something goes wrong with a plugin and you can&#8217;t use WordPress, delete or rename that file in the <code>/home/centrome/public_html/blog/wp-content/plugins</code> directory and it will be automatically deactivated.</p>
+                    [callback] => 
+                )
+
+        )
+
+    [_help_sidebar:private] => <p><strong>For more information:</strong></p><p><a href="http://codex.wordpress.org/Managing_Plugins#Plugin_Management" target="_blank">Documentation on Managing Plugins</a></p><p><a href="http://wordpress.org/support/" target="_blank">Support Forums</a></p>
+    [_options:private] => Array
+        (
+            [per_page] => Array
+                (
+                    [label] => Plugins
+                    [default] => 999
+                )
+
+        )
+
+    [_show_screen_options:private] => 
+    [_screen_settings:private] => 
+)
+ Help: Array
+[10-Jan-2012 23:07:50] PHP Fatal error:  Call to undefined method WP_Error::get_items() in /home/centrome/public_html/blog/wp-content/plugins/google-analytics-for-wordpress/yst_plugin_tools.php on line 196
+[16-May-2012 15:39:38] PHP Warning:  in_array() [<a href='function.in-array'>function.in-array</a>]: Wrong datatype for second argument in /home/centrome/public_html/blog/wp-content/plugins/headspace2/ajax.php on line 238

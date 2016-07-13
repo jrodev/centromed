@@ -1,0 +1,94 @@
+                        <?php //var_dump($this->oEspc); exit;?>
+                        <style>
+                        #rowTemplate,.row-espec input{display: none;}
+                        .row-espec input{height:26px !important; width:75% !important;}
+                        </style>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th><th>Nombre</th><th>Direccion</th><th>Telefono</th><th>activo</th><th>Fecha de registro</th><th>Editar</th><th>Eliminar</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="items">
+                                    <?php foreach ($this->oSede as $i=>$e):?>
+                                    <tr class="row-espec">
+                                        <td>
+                                            <span><?php echo $e->idsede?></span>
+                                            <input type="hidden" name="idsede" value="<?php echo $e->idsede?>" />
+                                        </td>
+                                        <td>
+                                            <span><?php echo $e->nom?></span>
+                                            <input type="hidden" name="nom" value="<?php echo $e->nom?>" />
+                                        </td>
+                                        <td>
+                                            <span><?php echo $e->direc?></span>
+                                            <input type="hidden" name="direc" value="<?php echo $e->direc?>" />
+                                        </td>
+                                        <td>
+                                            <span><?php echo $e->telf?></span>
+                                            <input type="hidden" name="telf" value="<?php echo $e->telf?>" />
+                                        </td>
+                                        <td>
+                                            <!--span><?php echo $e->activo?></span-->
+                                            <input type="checkbox" name="activo" value="<?php echo $e->activo?>" <?php if($e->activo=='1'){?>checked<?php }?> />
+                                        </td>
+                                        <td><?php echo $e->fecreg?></td>
+                                        <td><a class="btn btn-info" data-target="#bstrModal" href="#process" data-toggle="modal">Editar</a></td>
+                                        <td><a class="btn btn-warning" href="#delete" id-esp="<?php echo $e->idsede?>">Eliminar</a></td>
+                                    </tr>
+                                    <?php endforeach;?>
+                                    
+                                    <tr id="rowAddEspec">
+                                        <td colspan="8" align="center">
+                                            <a class="btn btn-info" data-target="#bstrModal" href="#process" data-toggle="modal">A&nacute;adir</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Modal de insercion y edicion -->
+                        <div class="modal fade bs-modal-sm" id="bstrModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" style="width:350px;">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <form id="frmEspec" class="form-horizontal" role="form" method="post" action="">
+                                            <input type="hidden" name="idsede" />
+                                            <div class="form-group">
+                                                <label for="nom" class="col-sm-3 control-label">Nombres</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" name="nom" class="form-control" required placeholder="Nombres" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="direc" class="col-sm-3 control-label">Direci&oacute;n</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" name="direc" class="form-control" required placeholder="Direci&oacute;n" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="telf" class="col-sm-3 control-label">Tel&eacute;fono</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" name="telf" class="form-control" required placeholder="Tel&eacute;fono" />
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="activo" class="col-sm-3 control-label">Activo</label>
+                                                <div class="col-sm-9">
+                                                    <input type="checkbox" name="activo" class="form-control" checked />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-3 col-sm-10">
+                                                    <button type="submit" class="btn btn-info">Guardar</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>

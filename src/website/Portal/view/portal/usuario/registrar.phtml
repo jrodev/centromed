@@ -1,0 +1,79 @@
+                                
+                                <div id="registerWarn" class="alert alert-warning alert-dismissible" role="alert" style="display:none;">
+                                    <strong>Error ! </strong> Datos incorrectos.
+                                </div>
+                                <form id="formRegister" method="post" action="/portal/usuario/registrar">
+                                    <div id="frmUser">
+                                        <div id="inpsUser">
+                                            <div class="row show">
+                                                <?php echo $this->formHidden($formreg->get('idusuario')) ?>
+                                                <div class="col-sm-2">
+                                                    <div class="form-group">
+                                                        <?php //echo $this->formLabel($formreg->get('sex')) ?>
+                                                        <?php echo $this->formSelect($formreg->get('sex')) ?>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-group">
+                                                        <?php //echo $this->formLabel($formreg->get('nom')) ?>
+                                                        <?php echo $this->formInput($formreg->get('nom')) ?>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <?php //echo $this->formLabel($formreg->get('ape')) ?>
+                                                        <?php echo $this->formInput($formreg->get('ape')) ?>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <?php //echo $this->formLabel($formreg->get('tipodoc')) ?>
+                                                        <?php echo $this->formSelect($formreg->get('tipodoc')) ?>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <?php //echo $this->formLabel($formreg->get('fecnac')) ?>
+                                                        <?php echo $this->formInput($formreg->get('fecnac')) ?>
+                                                        <input type="text" id="usufecnac" class="form-control" placeholder="Fecha de nacimiento __/__/____" tabindex="7" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <?php //echo $this->formLabel($formreg->get('telf')) ?>
+                                                        <?php echo $this->formInput($formreg->get('telf')) ?>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <?php //echo $this->formLabel($formreg->get('mail')) ?>
+                                                        <?php echo $this->formInput($formreg->get('mail')) ?>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <?php //echo $this->formLabel($formreg->get('pass')) ?>
+                                                        <?php echo $this->formInput($formreg->get('pass')) ?>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="form-group">
+                                                        <?php //echo $this->formLabel($formreg->get('nrodoc')) ?>
+                                                        <?php echo $this->formInput($formreg->get('nrodoc')) ?>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <?php //echo $this->formLabel($formreg->get('iddistrito')) ?>
+                                                        <?php echo $this->formSelect($formreg->get('iddistrito')) ?>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <?php //echo $this->formLabel($formreg->get('cel')) ?>
+                                                        <?php echo $this->formInput($formreg->get('cel')) ?>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <!--label for="verifmail">Verificar email *</label-->
+                                                        <input type="email" value="<?php echo $formreg->get('mail')->getValue()?>" class="form-control" id="verifmail" tabindex="12" name="verifmail" placeholder="Verificar email" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <!--label for="verifpass">Verificar contrase&ntilde;a *</label-->
+                                                        <input type="password" value="<?php echo $formreg->get('pass')->getValue()?>" id="verifpass" name="verifpass" tabindex="14" class="form-control" placeholder="Verificar contrase&ntilde;a" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12">
+                                                    <center><?php echo $this->formButton($formreg->get('submit'))?></center>
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>

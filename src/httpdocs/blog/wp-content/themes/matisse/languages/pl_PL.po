@@ -1,0 +1,859 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: matisse\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-12-23 18:33+0100\n"
+"PO-Revision-Date: 2011-12-23 18:33+0100\n"
+"Last-Translator: Tomasz Mazur <tommek77@gmail.com>\n"
+"Language-Team: blankcanvas <tommek77@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/404.php:5
+msgid "Error 404 - Not Found"
+msgstr "Błąd 404 - Nie odnaleziono strony  "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/404.php:8
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:35
+#: F:\WWW\wordpress\wp-content\themes\matisse/index.php:12
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Przepraszamy, ale strona, której szukasz, nie mogła zostać znaleziona. Być może uda Ci się ją wyszukać?"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:6
+#, php-format
+msgid "Category Archives: <span>%s</span>"
+msgstr "Archiwum Kategorii: <span>%s</span> "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:8
+#, php-format
+msgid "Tag Archives: <span>%s</span>"
+msgstr "Archiwum Tagów: <span>%s</span>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:10
+#, php-format
+msgid "Daily Archives: <span>%s</span>"
+msgstr "Archiwum dnia: <span>%s</span>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:12
+#, php-format
+msgid "Monthly Archives: <span>%s</span>"
+msgstr "Archiwum miesiąca: <span>%s</span>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:14
+#, php-format
+msgid "Yearly Archives: <span>%s</span>"
+msgstr "Archiwum roku: <span>%s</span>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:16
+msgid "Gallery"
+msgstr "Galeria "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:18
+msgid "Links"
+msgstr "Odnośniki "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:20
+msgid "Aside"
+msgstr "Notatka"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:22
+msgid "Images"
+msgstr "Obrazy "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:24
+msgid "Blog Archives"
+msgstr "Archiwum strony"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archive.php:33
+#: F:\WWW\wordpress\wp-content\themes\matisse/index.php:10
+msgid "Not Found"
+msgstr "Nie odnaleziono"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/archives-page.php:34
+msgid "Sorry, no posts matched your criteria."
+msgstr "Przepraszamy, nie istnieje wpis spełniający kryteria."
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:53
+#: F:\WWW\wordpress\wp-content\themes\matisse/content-gallery.php:15
+#: F:\WWW\wordpress\wp-content\themes\matisse/content.php:26
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:149
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-aside.php:7
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-image.php:4
+msgid "Continue reading &rarr;"
+msgstr "Czytaj dalej &rarr;"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:66
+#, php-format
+msgid "Return to %s"
+msgstr "Powrót do %s "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:67
+#, php-format
+msgid "<span class=\"meta-nav\">&larr;</span> %s"
+msgstr "<span class=\"meta-nav\">&larr;</span> %s "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:70
+msgid "<li>Title : "
+msgstr "<li>Tytuł :  "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:72
+#, php-format
+msgid "<li><span class=\"%1$s\">Published</span> %2$s"
+msgstr "<li><span class=\"%1$s\">Opublikowano:</span> %2$s "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:75
+#, php-format
+msgid "Full size is %s pixels"
+msgstr "Orginalny rozmiar wynosi: %s pikseli "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:75
+msgid "Link to full-size image"
+msgstr "Link do pełnego wymiaru obrazka "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:81
+msgid "<li>Caption: "
+msgstr "<li>Opis:  "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:83
+msgid "<li>Camera: "
+msgstr "<li>Model aparatu:  "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:85
+msgid "<li>Aperture: f/"
+msgstr "<li>Przesłona: f/"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:87
+msgid "<li>Copyright: "
+msgstr "<li>Prawa autorskie:"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:89
+msgid "<li>Credit: "
+msgstr "<li>Opis: "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:91
+msgid "<li>Focal Length: "
+msgstr "<li>Obiektyw:  "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:93
+msgid "<li>ISO: "
+msgstr "<li>ISO:  "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:95
+msgid "<li>Shutter Speed: "
+msgstr "<li>Szybkość  migawki: "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/attachment.php:100
+msgid "Edit"
+msgstr "Edytuj"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/author.php:8
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Archiwum autora: %s"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/comments.php:3
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Ten wpis jest chroniony hasłem, wpisz hasło."
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/comments.php:9
+#, php-format
+msgid "Response to <strong>%1$s</strong>"
+msgstr "Odpowiedzi na  <strong>%1$s</strong>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/comments.php:29
+msgid "Comments are closed."
+msgstr "Komentarze są wyłączone."
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/content-gallery.php:10
+#: F:\WWW\wordpress\wp-content\themes\matisse/content.php:10
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-aside.php:15
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-gallery.php:8
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-image.php:17
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-image.php:43
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-link.php:8
+msgid "0"
+msgstr "0"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/content-gallery.php:10
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-aside.php:15
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-gallery.php:8
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-image.php:17
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-link.php:8
+msgid "1"
+msgstr "1"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/content-gallery.php:10
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-image.php:43
+msgid "%"
+msgstr "%  "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/content-gallery.php:17
+#: F:\WWW\wordpress\wp-content\themes\matisse/content.php:28
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-gallery.php:37
+msgid "Pages:"
+msgstr "Strony: "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/content-gallery.php:30
+#: F:\WWW\wordpress\wp-content\themes\matisse/content.php:38
+#, php-format
+msgid "About %s"
+msgstr "Informacje o %s "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/content-gallery.php:33
+#: F:\WWW\wordpress\wp-content\themes\matisse/content.php:41
+#, php-format
+msgid "View all posts by %s &rarr;"
+msgstr "Zobacz wszystkie posty %s &rarr;"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/content.php:10
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-image.php:43
+msgid "1 "
+msgstr "1 "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/content.php:10
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-aside.php:15
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-gallery.php:8
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-image.php:17
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-link.php:8
+msgid "% "
+msgstr "% "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/footer.php:28
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/ "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/footer.php:28
+msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
+msgstr "Powered by WordPress, state-of-the-art semantic personal publishing platform. "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/footer.php:31
+msgid "http://tommek.eu"
+msgstr "http://tommek.eu "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:28
+msgid "Primary Navigation"
+msgstr "Podstawowa nawigacja"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:43
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:53
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:63
+msgid "Sidebar Widget Area"
+msgstr "Sidebar, obszar dla widgetów"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:45
+msgid "The sidebar widget area, full width"
+msgstr "Obszar dla widgetów, cała szerokość kolumny"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:55
+msgid "The sidebar widget area, left side"
+msgstr "Obszar dla widgetów w lewej kolumnie"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:65
+msgid "The sidebar widget area, right side"
+msgstr "Obszar dla widgetów w prawej kolumnie "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:73
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:83
+msgid "Footer Widget Area"
+msgstr "Stopka, obszar dla widgetów"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:75
+msgid "The first footer widget area"
+msgstr "Pierwszy obszar dla widgetów w stopce"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:85
+msgid "The second footer widget area"
+msgstr "Drugi obszar dla widgetów w stopce"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:134
+msgid "Image"
+msgstr "Obraz"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:156
+#, php-format
+msgid "<p> Posted on %4$s by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s </a></span> </p>"
+msgstr "<p> Opublikowano  %4$s przez <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s </a></span> </p>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:158
+#, php-format
+msgid "<p> Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time datetime=\"%3$s\" pubdate>%4$s</time></a> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s </a></span> </p>"
+msgstr "<p>Opublikowano  <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a>  przez  <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></p> "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:174
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:175
+msgid ", "
+msgstr ""
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:177
+#, php-format
+msgid "This <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">entry</a> was posted in %1$s and tagged %2$s. %7$s"
+msgstr "Ten <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">wpis</a> został opublikowany w %1$s i oznaczony jako %2$s. %7$s"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:179
+#, php-format
+msgid "This <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">entry</a> was posted in %1$s. %7$s"
+msgstr "Ten  <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">wpis</a> został opublikowany w %1$s. %7$s"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:181
+#, php-format
+msgid "This <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">entry</a> was posted by <a href=\"%6$s\">%5$s</a>. %7$s"
+msgstr "Ten  <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">wpis</a> został opublikowany przez <a href=\"%6$s\">%5$s</a>. %7$s"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:183
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-aside.php:13
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-image.php:24
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-image.php:50
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-link.php:6
+msgid "Edit This"
+msgstr "Edytuj wpis"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:218
+msgid "Matisse"
+msgstr "Matisse"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:223
+msgid "Matisse 2"
+msgstr "Matisse 2"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:228
+msgid "Matisse 3"
+msgstr "Matisse 3"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:276
+msgid "Social"
+msgstr "Social"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:279
+msgid "Twitter URL"
+msgstr "Link do profilu Twitter  "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:285
+msgid "Facebook URL"
+msgstr "Link do profilu Facebook"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:291
+msgid "Google plus URL"
+msgstr "Link do profilu Google Plus"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:312
+#, php-format
+msgid "<li id=\"matisse_w\"><a href=\"%1$s\" title=\"%2$s\">%2$s</a></li>"
+msgstr "<li id=\"matisse_w\"><a href=\"%1$s\" title=\"%2$s\">%2$s</a></li>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:313
+msgid "Website"
+msgstr "Strona www"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:317
+#, php-format
+msgid "<li><a href=\"%1$s\" title=\"%2$s\">%2$s</a></li>"
+msgstr "<li><a href=\"%1$s\" title=\"%2$s\">%2$s</a></li>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:318
+msgid "Twitter"
+msgstr "Link do profilu Twitter   "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:322
+#, php-format
+msgid "<li id=\"matisse_f\"><a href=\"%1$s\" title=\"%2$s\">%2$s</a></li>"
+msgstr "<li id=\"matisse_f\"><a href=\"%1$s\" title=\"%2$s\">%2$s</a></li>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:323
+msgid "Facebook"
+msgstr "Link do profilu Facebook "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:327
+#, php-format
+msgid "<li id=\"matisse_g\"><a href=\"%1$s\" title=\"%2$s\">%2$s</a></li>"
+msgstr "<li id=\"matisse_g\"><a href=\"%1$s\" title=\"%2$s\">%2$s</a></li>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:328
+msgid "Google plus"
+msgstr "Link do profilu Google Plus "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:362
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s z %2$s "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:362
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:389
+msgid "(Edit)"
+msgstr "Edytuj"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:364
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">pisze:</span> "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:372
+msgid "Your comment is awaiting moderation."
+msgstr "Twój komentarz oczekuje na moderację."
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/functions.php:389
+msgid "Pingback:"
+msgstr "Pingback, cytat: "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/header.php:15
+#, php-format
+msgid "Page %s"
+msgstr "Strona %s "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-gallery.php:3
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-image.php:13
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-image.php:39
+#, php-format
+msgid "Permanent Link to %s"
+msgstr "Odnośnik do %s "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/loop-gallery.php:17
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Czytaj dalej <span class=\"meta-nav\">&rarr;</span>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/page.php:20
+#: F:\WWW\wordpress\wp-content\themes\matisse/sidebar-page.php:26
+#: F:\WWW\wordpress\wp-content\themes\matisse/slide-page.php:88
+msgid "(more...)"
+msgstr "(więcej...) "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/search.php:3
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Wynik wyszukiwania dla: %s"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/sidebar.php:21
+msgid "Categories"
+msgstr "Kategorie "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/sidebar.php:37
+msgid "Tags"
+msgstr "Tagi "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/matisse-theme-options.php:4
+msgid "Theme Options"
+msgstr "Opcje tematu"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/matisse-theme-options.php:20
+msgid "Matisse Theme Options"
+msgstr "Matisse -  Opcje Motywu"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/matisse-theme-options.php:27
+msgid "Save Changes"
+msgstr "Zapisz zmiany"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/matisse-theme-options.php:34
+msgid "General Settings"
+msgstr "Główne ustawiena"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/matisse-theme-options.php:35
+msgid "Logo URL"
+msgstr "Link do pliku z logo"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/matisse-theme-options.php:36
+msgid "Color links"
+msgstr "Kolor odnośników "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/matisse-theme-options.php:41
+msgid "The general section."
+msgstr "Sekcja główna."
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/matisse-theme-options.php:51
+msgid "Link Color"
+msgstr "Kolor odnośnika"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/matisse-theme-options.php:58
+#, php-format
+msgid "Default color: %s"
+msgstr "Kolor domyślny: %s"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/matisse-theme-options.php:68
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\"><br />Upload your logo</a>"
+msgstr "<a href=\"%s\" target=\"_blank\"><br />Dodaj swoje logo</a>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/matisse-theme-options.php:68
+msgid "(max 360px x 120px) using WordPress Media Library and insert its URL here"
+msgstr "Dodaj obrazek twojego logo (maksymalna rozmiar 360px x 120px) poprzez biblotekę mediów, a następnie wklej w okno link do pliku."
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/widgets/about.php:44
+msgid "Name:"
+msgstr "Imię i nazwisko:"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/widgets/about.php:47
+msgid "Link to your image(80x80px):"
+msgstr "Link do obrazka(80x80px):"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/widgets/about.php:52
+msgid "Description:"
+msgstr "Opis: "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/widgets/flickr.php:49
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/widgets/twitter.php:56
+msgid "Title:"
+msgstr "Tytuł:"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/widgets/flickr.php:53
+#, php-format
+msgid "\"Flickr\"- ID. <a href=\"%s\" target=\"_blank\">idgettr.com</a>"
+msgstr "\"Flickr\"- identyfikator konta Flickr. <a href=\"%s\">idgettr.com</a>"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/widgets/flickr.php:53
+msgid "http://idgettr.com/"
+msgstr "http://idgettr.com/ "
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/widgets/flickr.php:58
+msgid "Number of photo to display:"
+msgstr "Liczba zdjęć do wyświetlenia:"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/widgets/twitter.php:59
+msgid "User:"
+msgstr "Urzytkownik:"
+
+#: F:\WWW\wordpress\wp-content\themes\matisse/inc/widgets/twitter.php:64
+msgid "Number of Tweets to display:"
+msgstr "Liczba wpisów do wyświetlenia:"
+
+#~ msgid "Leave a comment"
+#~ msgstr "Dodaj komentarz"
+
+#~ msgid "1 Comment"
+#~ msgstr "Jeden komentarz  "
+
+#~ msgid "% Comments"
+#~ msgstr "%   komentarzy"
+
+#~ msgid "http://blankcanvas.eu"
+#~ msgstr "http://blankcanvas.eu"
+
+#~ msgid "Categotry: <span>%s</span>"
+#~ msgstr "Archiwum kategorii: <span>%s</span> "
+
+#~ msgid "Posts tagged <span>%s</span>"
+#~ msgstr "Archiwum tagów: <span>%s</span> "
+
+#~ msgid "Matisse 4"
+#~ msgstr "Matisse 4"
+
+#~ msgid "Matisse 5"
+#~ msgstr "Matisse 5"
+
+#~ msgid "Popular Tags"
+#~ msgstr "Popularne tagi"
+
+#~ msgid "Second Footer Widget Area"
+#~ msgstr "Stopka, drugi obszar "
+
+#~ msgid "Custom logo url:"
+#~ msgstr "Adres url do pliku logo:"
+
+#~ msgid "Slide"
+#~ msgstr "Pokaz slajdów"
+
+#~ msgid ""
+#~ "Turn on the \"lightbox\" effect to your photos (Gallery, Image with the "
+#~ "signature)"
+#~ msgstr ""
+#~ "Turn on the \"lightbox\" effect to your photos (Gallery, Image with the "
+#~ "signature)"
+
+#~ msgid "Lightbox"
+#~ msgstr "Lightbox"
+
+#~ msgid "\"Flickr\"- ID. <a href=\""
+#~ msgstr "\"Flickr\"- ID. <a href=\" "
+
+#~ msgid "\" target=\"_blank\">idgettr.com</a>"
+#~ msgstr "\" target=\"_blank\">idgettr.com</a> "
+
+#, fuzzy
+#~ msgid "This entry was posted in %1$s and tagged %2$s. %5$s"
+#~ msgstr "Ten wpis został opublikowany w %1$s i oznaczony jako %2$s."
+
+#, fuzzy
+#~ msgid "This entry was posted in %1$s. %5$s"
+#~ msgstr "Ten wpis został opublikowany w %1$s."
+
+#~ msgid "This entry was posted by <a href=\"%3$s\">%5$s</a>. %5$s"
+#~ msgstr "Ten wpis został opublikowany przez  <a href=\"%3$s\">%5$s</a>."
+
+#~ msgid "This gallery contains <a %1$s>%2$s photos</a>."
+#~ msgstr "Ta galeria zawiera  <a %1$s> %2$s zdjęcia</a>."
+
+#~ msgid ""
+#~ "This <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">entry</"
+#~ "a> was posted in %1$s and tagged %2$s by <a href=\"%6$s\">%5$s</a>."
+#~ msgstr ""
+#~ "Ten <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">wpis</"
+#~ "a> został opublikowany w %1$s i oznaczony jako %2$s przez <a href=\"%6$s"
+#~ "\">%5$s</a>."
+
+#~ msgid ""
+#~ "This <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">entry</"
+#~ "a> was posted in %1$s by <a href=\"%6$s\">%5$s</a>."
+#~ msgstr ""
+#~ "Ten <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">wpis</"
+#~ "a>  został opublikowany w %1$s przez <a href=\"%6$s\">%5$s</a>."
+
+#~ msgid "Theme design by"
+#~ msgstr "Autor szablonu "
+
+#~ msgid "Options saved"
+#~ msgstr "Zapisane opcje "
+
+#~ msgid ""
+#~ "Enter Facebook  account name, <br />for example(http://www.facebook.com/?"
+#~ "ref=logo#!/<strong>mazurtomek</strong>)"
+#~ msgstr ""
+#~ "Wprowadż nazwę konta na Facebook, <br /> np (http://www.facebook.com/?"
+#~ "ref=logo#!/<strong>mazurtomek</strong>)"
+
+#~ msgid "LastFM"
+#~ msgstr "LastFm"
+
+#~ msgid ""
+#~ "Enter LastFM  account name, <br />for example(http://www.lastfm.pl/user/"
+#~ "<strong>tommek</strong>)"
+#~ msgstr ""
+#~ "Wprowadż nazwę konta na Last FM, <br />np (http://www.lastfm.pl/user/"
+#~ "<strong>tommek</strong>)"
+
+#~ msgid "YouTube"
+#~ msgstr "YouTube "
+
+#~ msgid ""
+#~ "Enter YouTube  account name,<br /> for example(http://www.youtube.com/"
+#~ "user/<strong>tommek1977</strong>)"
+#~ msgstr ""
+#~ "Wprowadż nazwę konta na YouTube,<br /> np (http://www.youtube.com/user/"
+#~ "<strong>tommek1977</strong>)"
+
+#~ msgid "Save Options"
+#~ msgstr "Zapisz opcje"
+
+#~ msgid ""
+#~ "This entry was posted in %1$s and tagged %2$s by <a href=\"%6$s\">%5$s</"
+#~ "a>. Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+#~ "\"bookmark\">permalink</a>."
+#~ msgstr ""
+#~ "Ten wpis został opublikowany w %1$s i oznaczony jako %2$s przez <a href="
+#~ "\"%6$s\">%5$s</a>. Adres <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+#~ "\"bookmark\">wpisu</a>."
+
+#~ msgid ""
+#~ "This entry was posted in %1$s by <a href=\"%6$s\">%5$s</a>. Bookmark the "
+#~ "<a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</"
+#~ "a>."
+#~ msgstr ""
+#~ "Ten wpis został opublikowany w  %1$s przez <a href=\"%6$s\">%5$s</a>. "
+#~ "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
+#~ "\">permalink</a>."
+
+#~ msgid ""
+#~ "This entry was posted by <a href=\"%6$s\">%5$s</a>. Bookmark the <a href="
+#~ "\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
+#~ msgstr ""
+#~ "Ten wpis został opublikowany przez <a href=\"%6$s\">%5$s</a>. Bookmark "
+#~ "the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
+#~ "\">permalink</a>."
+
+#~ msgid "Syndicate this site using RSS"
+#~ msgstr "Subskrybuj tę stronę w kanale  RSS."
+
+#~ msgid "<abbr title=\"Really Simple Syndication\">RSS</abbr>"
+#~ msgstr "<abbr title=\"Subskrybuj kanał Rss\">RSS</abbr> "
+
+#~ msgid "The latest comments to all posts in RSS"
+#~ msgstr "Najnowsze komentarze w kanale  RSS."
+
+#~ msgid "Comments <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+#~ msgstr "Komentarze <abbr title=\"Really Simple Syndication\">RSS</abbr>"
+
+#~ msgid "Third Footer Widget Area"
+#~ msgstr "Stopka, drugi obszar"
+
+#~ msgid "The third footer widget area"
+#~ msgstr "Drugi  obszar dla widgetów w stopce"
+
+#, fuzzy
+#~ msgid " %1$s, Author: %2$s, "
+#~ msgstr "<em> %1$s, Autor:</em> %2$s,"
+
+#~ msgid "&larr; Older posts"
+#~ msgstr "&larr; Starsze wpisy "
+
+#~ msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+#~ msgstr "<span class=\"meta-nav\">&larr;</span> Starsze komentarze."
+
+#~ msgid "Header Widget Area"
+#~ msgstr "Nagłowek, obszar dla widgetów"
+
+#~ msgid "The header widget area"
+#~ msgstr "Obszar dla widgetów w nagłówku strony"
+
+#~ msgid "Category Archives"
+#~ msgstr "Archiwum kategorii"
+
+#~ msgid "Archives"
+#~ msgstr "Archiwum "
+
+#~ msgid "Tag Archives"
+#~ msgstr "Archiwum tagów"
+
+#~ msgid "HTTP 404: Not Found"
+#~ msgstr "HTTP 404: Strona nie istnieje"
+
+#~ msgid "Tags:"
+#~ msgstr "Tagi  "
+
+#~ msgid "More Gallery"
+#~ msgstr "Zobacz inne galerie"
+
+#~ msgid "More Images"
+#~ msgstr "Zobacz inne obrazy "
+
+#~ msgid "Search Results for: <span>%s</span>"
+#~ msgstr "Wynik wyszukiwania dla: <span>%s</span>"
+
+#~ msgid "Subscribe Rss"
+#~ msgstr "Subskrybuj kanał RSS "
+
+#~ msgid "Facebook profil"
+#~ msgstr "Profil na koncie Facebook"
+
+#~ msgid "YouTube profil"
+#~ msgstr "Profil w serwisie YouTube  "
+
+#~ msgid "Recent Posts"
+#~ msgstr "Najnowsze wpisy "
+
+#~ msgid "Author"
+#~ msgstr "Autor: "
+
+#~ msgid "Enter Google Analitics code"
+#~ msgstr "Wpisz kod Google Analitics"
+
+#~ msgid "One Response to %2$s"
+#~ msgstr "Jedna Odpowiedż do"
+
+#~ msgid "Comments (1)"
+#~ msgstr "Komentarz (1) "
+
+#~ msgid "Comments (%)"
+#~ msgstr "Komentarze (%) "
+
+#~ msgid "Flickr gallery"
+#~ msgstr "Galeria Flickr"
+
+#~ msgid "A widget to enable people to follow you on Twitter"
+#~ msgstr "Widget wyświetlający moje wpisy na Twitterze"
+
+#, fuzzy
+#~ msgid "Stock number:"
+#~ msgstr "Liczba zakotwiczeń"
+
+#, fuzzy
+#~ msgid "Your photo (80x80px):"
+#~ msgstr "Proszę wprowadzić opis"
+
+#~ msgid "Linkedin profil"
+#~ msgstr "Profil na koncie Linkedin "
+
+#~ msgid "Enter Facebook  account name"
+#~ msgstr "Wprowadź nazwę konta na Facebook"
+
+#~ msgid "Enter LastFM  account name"
+#~ msgstr "Wprowadź nazwę konta LastFM"
+
+#~ msgid " Enter Linkedin  account name"
+#~ msgstr "Wprowadź nazwę konta Linkedin"
+
+#~ msgid "Enter YouTube  account name"
+#~ msgstr "Wprowadź nazwę konta YouTube"
+
+#, fuzzy
+#~ msgid "Put your full twitter address here"
+#~ msgstr "Put your full twitter address here."
+
+#, fuzzy
+#~ msgid "Twitt number:"
+#~ msgstr "Liczba zakotwiczeń"
+
+#~ msgid "E-mail"
+#~ msgstr "E-mail"
+
+#~ msgid "LastFM name"
+#~ msgstr "Login do konta LastFM "
+
+#, fuzzy
+#~ msgid "Source Language:"
+#~ msgstr "Ustawienie języka"
+
+#, fuzzy
+#~ msgid "Number of post(max10):"
+#~ msgstr "Ustawia ilość iskier"
+
+#~ msgid "Sidebar top"
+#~ msgstr "Sidebar - góra"
+
+#~ msgid "Sidebar bottom"
+#~ msgstr "Sidebar - dół"
+
+#~ msgid "Typo-o-Graphy Options"
+#~ msgstr "Typo-o-Graphy - opcje szablonu"
+
+#~ msgid "<strong>Facebook</strong>"
+#~ msgstr "<strong>Facebook</strong> "
+
+#~ msgid "<strong>Twitter</strong>"
+#~ msgstr "<strong>Twitter</strong> "
+
+#~ msgid "<strong>Flickr</strong>"
+#~ msgstr "<strong>Flickr</strong> "
+
+#~ msgid "<strong>Linkedin</strong>"
+#~ msgstr "<strong>Linkedin</strong>  "
+
+#~ msgid "<strong>You Tube</strong>"
+#~ msgstr "<strong>You Tube</strong>  "
+
+#~ msgid "<strong>Name</strong>"
+#~ msgstr "<strong>Imię i nazwisko</strong> "
+
+#~ msgid "Your name."
+#~ msgstr "Imię i  nazwisko: "
+
+#~ msgid "<strong>E-mail</strong>"
+#~ msgstr "<strong>E-mail</strong> "
+
+#~ msgid "Your e-mail."
+#~ msgstr "Twój e-mail. "
+
+#~ msgid "<strong>Photo</strong>"
+#~ msgstr "<strong>Fotografia</strong> "
+
+#~ msgid "<strong>Description</strong>"
+#~ msgstr "Opis "
+
+#~ msgid "Past your google analitic code."
+#~ msgstr "Wklej kod Google Analitics."
+
+#~ msgid "Update Options &raquo;"
+#~ msgstr "Aktualizuj opcje &raquo; "
+
+#~ msgid "Twitter profil"
+#~ msgstr "<strong>Profil na koncie Twitter</strong> "
+
+#~ msgid "Flickr profil"
+#~ msgstr "<strong>Profil na knocie Flickr</strong> "
+
+#~ msgid "Category"
+#~ msgstr "Kategorie "
+
+#~ msgid "%1$s Responses to %2$s"
+#~ msgstr "%1$s Odpowidzi na  %2$s"
+
+#~ msgid "Typo-o-Graphy Options."
+#~ msgstr "Typo-o-Graphy - opcje szablonu. "

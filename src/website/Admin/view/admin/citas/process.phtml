@@ -1,0 +1,289 @@
+                
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-md-12">
+                        
+                    <?php if($_GET && key_exists('petoken', $_GET)):?>
+                    
+                        <br />
+                        <center>
+                            <iframe src="<?php echo $this->portal('urlIfrmPE')?>?Token=<?php echo $_GET['petoken']?>" width="1020"  height="1400" frameborder="no"  style="border:1px solid #000000;"></iframe>
+                        </center>
+                        
+                    <?php else: ?>
+                        
+                        <?php echo $this->form()->openTag($form);?>
+                        
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="box-header">
+                                        <h3 class="box-title">Datos de Reserva</h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10">
+                                    <div class="box box-primary">
+                                        <div class="box-body">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-3">
+                                                        <?php echo $this->formLabel($form->get('idseguro')); ?>
+                                                        <?php echo $this->formSelect($form->get('idseguro')); ?>
+                                                    </div>
+                                                    <div class="col-lg-3">
+                                                        <?php echo $this->formLabel($form->get('frmsede')); ?>
+                                                        <?php echo $this->formSelect($form->get('frmsede')); ?>
+                                                    </div>
+                                                    <div class="col-lg-2">
+                                                        <?php echo $this->formLabel($form->get('frmhorario')); ?>
+                                                        <?php echo $this->formSelect($form->get('frmhorario')); ?>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <?php echo $this->formLabel($form->get('frmespec')); ?>
+                                                        <!-- Se llena por ajax-->
+                                                        <?php echo $this->formSelect($form->get('frmespec')); ?>
+                                                        <?php echo $this->formHidden($form->get('idhorario')); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <?php echo $this->formHidden($form->get('datehour')); ?>
+                                            <div id="citaHoras" class="form-group">
+                                                <?php for ($i = 35; $i > 0; $i--): ?>
+                                                    <button class="btn btn-primary">Primary</button>
+                                                <?php endfor; ?>
+                                            </div>
+                                            <!-- OCULTO: para mantener estructura de implementacion en portal /solicite-cita2 -->
+                                            <button id="citaVerMapa" type="button" class="btn btn-link" style="display:none" disabled>Ver mapa</button>
+                                            <div id="rowIfrmMapa" class="row show-grid" style="display:none">
+                                                <div class="col-sm-12">
+                                                    <iframe width="100%" height="310" frameborder="0" scrolling="no" name="ifrmMapa" id="ifrmMapa"></iframe><!--src="/mapa"-->
+                                                </div>
+                                            </div>
+                                            <!-- ---------------------------------------------------------------------------------------------------- -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--hr class="soften" /-->
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="box-header">
+                                        <h3 class="box-title">Datos de Referencia</h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10">
+                                    <div class="box box-primary">
+                                        <div class="box-body"><br />
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div id="citaRefLbl" class="col-lg-3">
+                                                        <label for="exampleInputEmail1">
+                                                            <?php echo $this->formLabel($form->get('frmref')); ?>
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <?php echo $this->formSelect($form->get('frmref')); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="box-header">
+                                        <h3 class="box-title">Datos de Usuario</h3>
+                                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                                            Buscar Paciente
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10">
+                                    <div id="frmUser" class="box box-primary">
+                                        <?php echo $this->formInput($formreg->get('idusuario')); ?>
+                                        <div class="box-body">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <?php echo $this->formLabel($formreg->get('sex')); ?>
+                                                        <?php echo $this->formSelect($formreg->get('sex')); ?>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <?php echo $this->formLabel($formreg->get('nom')); ?>
+                                                        <?php echo $this->formInput($formreg->get('nom')); ?>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <?php echo $this->formLabel($formreg->get('ape')); ?>
+                                                        <?php echo $this->formInput($formreg->get('ape')); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <?php echo $this->formLabel($formreg->get('tipodoc')); ?>
+                                                        <?php echo $this->formSelect($formreg->get('tipodoc')); ?>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <?php echo $this->formLabel($formreg->get('nrodoc')); ?>
+                                                        <?php echo $this->formInput($formreg->get('nrodoc')); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <?php echo $this->formLabel($formreg->get('fecnac')); ?>
+                                                        <?php echo $this->formInput($formreg->get('fecnac')); ?>
+                                                        <input id="usufecnac" type="text" data-mask="" data-inputmask="'alias': 'dd/mm/yyyy'" class="form-control" autocomplete="off" />
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <?php echo $this->formLabel($formreg->get('iddistrito')); ?>
+                                                        <?php echo $this->formSelect($formreg->get('iddistrito')); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <?php echo $this->formLabel($formreg->get('telf')); ?>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                                            <?php echo $this->formInput($formreg->get('telf')); ?>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label for="exampleInputPassword1">Celular</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><i class="fa fa-mobile-phone"></i></span>
+                                                            <input class="form-control" placeholder="Telf. de Casa" type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <label for="exampleInputEmail1">Correo Electronico</label>
+                                                        <!--input type="text" placeholder="Telf. de Casa" class="form-control" /-->
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                                            <input class="form-control" placeholder="Email" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label for="exampleInputPassword1">Contrase&ntilde;a</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><i class="fa fa-asterisk"></i></span>
+                                                            <input type="password" placeholder="Contrase&ntilde;a" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="box-footer">
+                                            <button type="button" class="btn btn-default pull-left">Cancelar</button>
+                                            <button type="button" class="btn btn-primary pull-right">Guardar</button>
+                                            <div style="clear:both"></div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="box-header">
+                                        <h3 class="box-title">Datos de Pago</h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10">
+                                    <div class="box box-primary">
+                                        <div class="box-body"><br />
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <label>
+                                                            <input type="radio" name="r3" class="flat-red" checked />
+                                                            Pago en OSI
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <label>
+                                                            <input type="radio" name="r3" class="flat-red" />
+                                                            Pago Efectivo
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="box-header">
+                                        <h3 class="box-title">Nombre Admision</h3>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10">
+                                    <div class="box box-primary">
+                                        <div class="box-body"><br />
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div id="citaRefLbl" class="col-lg-3">
+                                                        <?php echo $this->formLabel($form->get('frmref')); ?>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <?php echo $this->formSelect($form->get('frmref')); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-2"></div>
+                                <div class="col-lg-10">
+                                    <div class="box-footer">
+                                        <button type="button" class="btn btn-default pull-left">Cancelar</button>
+                                        <button type="button" class="btn btn-primary pull-right">Guardar</button>
+                                        <div style="clear:both"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <?php echo $this->form()->closeTag()?>
+                    <?php endif; ?>
+                    </div>
+                </div>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>

@@ -1,0 +1,88 @@
+                        <?php //var_dump($this->oEspc); exit;?>
+                        <style>
+                        #rowTemplate,.row-espec input{display: none;}
+                        .row-espec input{height:26px !important; width:75% !important;}
+                        </style>
+
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th><th>Nombre</th><th>Apellidos</th><th>Especialidad</th><th>Fecha de registro</th><th>Editar</th><th>Eliminar</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="items">
+                                    <?php foreach ($this->oEspc as $i=>$e):?>
+                                    <tr class="row-espec">
+                                        <td>
+                                            <span><?php echo $e->idespecialista?></span>
+                                            <input type="hidden" name="idespecialista" value="<?php echo $e->idespecialista?>" />
+                                        </td>
+                                        <td>
+                                            <span><?php echo $e->nom?></span>
+                                            <input type="hidden" name="nom" value="<?php echo $e->nom?>" />
+                                        </td>
+                                        <td>
+                                            <span><?php echo $e->ape?></span>
+                                            <input type="hidden" name="ape" value="<?php echo $e->ape?>" />
+                                        </td>
+                                        <td>
+                                            <span><?php echo $e->esp?></span>
+                                            <input type="hidden" name="esp" value="<?php echo $e->esp?>" />
+                                        </td>
+                                        <td><?php echo $e->fecreg?></td>
+                                        <td><a class="btn btn-info" data-target="#bstrModal" href="#process" data-toggle="modal">Editar</a></td>
+                                        <td><a class="btn btn-warning" href="#delete" id-esp="<?php echo $e->idespecialista?>">Eliminar</a></td>
+                                    </tr>
+                                    <?php endforeach;?>
+                                    
+                                    <tr id="rowAddEspec">
+                                        <td colspan="7" align="center">
+                                            <a class="btn btn-info" data-target="#bstrModal" href="#process" data-toggle="modal">A&nacute;adir</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Modal de insercion y edicion -->
+                        <div class="modal fade bs-modal-sm" id="bstrModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" style="width:350px;">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        
+                                        <form id="frmEspec" class="form-horizontal" role="form" method="post" action="">
+                                            <input type="hidden" name="idespecialista" />
+                                            <div class="form-group">
+                                                <label for="nom" class="col-sm-3 control-label">Nombres</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" name="nom" class="form-control" required placeholder="Nombres">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ape" class="col-sm-3 control-label">Apellidos</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" name="ape" class="form-control" required placeholder="Apellidos">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="esp" class="col-sm-3 control-label">Especialidad</label>
+                                                <div class="col-sm-9">
+                                                    <select name="esp" class="form-control" required>
+                                                        <option value="">- Seleccionar</option>
+                                                        <option value="Fisiatra">Fisiatra</option>
+                                                        <option value="Fisioterapeuta">Fisioterapeuta</option>                                                    
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-3 col-sm-10">
+                                                    <button type="submit" class="btn btn-info">Guardar</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>

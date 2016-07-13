@@ -1,0 +1,449 @@
+                
+                <?php $SESSION_PORTAL = $this->session('portal')->login() ?>
+                <div id="content-content">
+
+                    <?php if($_GET && key_exists('petoken', $_GET)):?>
+                    
+                        <br />
+                        <center>
+                            <iframe src="<?php echo $this->portal('urlIfrmPE')?>?Token=<?php echo $_GET['petoken']?>" width="1020"  height="1400" frameborder="no"  style="border:1px solid #000000;"></iframe>
+                        </center>
+                        
+                    <?php else:?>
+                        
+                        <center>
+                            <img src="<?php echo $this->portal('baseurl')?>/images/portadas/index/solicite-cita2.png" /> 
+                        </center>
+
+                        <div id="columna2" style="width:655px">
+                            <?php
+                            $form = $this->form;
+                            $formreg = $this->formreg;
+                            ?>
+                            <div id="cita-container">
+
+                                <?php if(key_exists('ok', $_GET)): ?>
+                                <div class="alert alert-success alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">X</span></button>
+                                    <strong>Registro correcto!</strong> Su cita se ha registrado correctamente.
+                                </div>
+                                <?php endif; ?>
+
+                                <?php echo $this->form()->openTag($form);?>
+
+                                <div class="panel panel-info">
+                                    <!--div class="panel-heading"><h3 id="solicitar-cita">SOLICITA UNA CITA</h3></div-->
+                                    <div class="panel-body">
+
+                                        <ul class="nav nav-tabs" role="tablist" id="myTab">
+                                            <li class="active" data-index="1"><a href="#citaPaso1" role="tab" data-toggle="tab">Datos de Cita</a></li>
+                                            <li class="disabled" data-index="2"><a href="#citaPaso2" role="tab">Datos de usuario</a></li> <!-- data-toggle="tab"-->
+                                            <li class="disabled" data-index="3"><a href="#citaPaso3" role="tab">Datos de pago</a></li>    <!-- data-toggle="tab"-->
+                                        </ul>
+
+                                        <div class="tab-content">
+
+                                            <div class="tab-pane fade" id="citaPaso2">
+
+                                                <?php if( !$SESSION_PORTAL ):?>
+                                                <div id="frmLogin">
+                                                    <div class="row show">
+                                                        <div class="col-sm-12">
+                                                            <div id="titFrmLogin" class="well well-sm">
+                                                                <h5><span class="glyphicon glyphicon-ok"></span> &nbsp;YA SOY PACIENTE</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="inpsLogin" class="row show-grid" style="display:none">
+                                                        <div class="col-sm-2">
+                                                            <select class="form-control" id="usutipodoc" name="tipodoc">
+                                                                <option value="1">Dni</option>
+                                                                <option value="2">Pasaporte</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <input type="text" value="" required="required" placeholder="Nro de documento" class="form-control" id="usunrodoc" name="nrodoc" />
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <input type="password" value="" required="required" placeholder="Contrase&ntilde;a" class="form-control" id="usupass" name="pass" />
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <button class="btn btn-primary" id="btnLogin" type="button">Login</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <?php endif;?>
+
+                                                <div id="frmUser">
+
+                                                    <div class="row show">
+                                                        <div class="col-sm-12">
+                                                            <div id="titFrmUser" class="well well-sm">
+                                                                <h5>
+                                                                    <?php if (!$SESSION_PORTAL): ?>
+                                                                        <span class="glyphicon glyphicon-pencil"></span> &nbsp;AUN NO SOY PACIENTE
+                                                                    <?php else: ?>
+                                                                        <span class="glyphicon glyphicon-ok"></span> &nbsp;YA SOY PACIENTE
+                                                                    <?php endif; ?>
+                                                                </h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="inpsUser" <?php if (!$SESSION_PORTAL):?>style="display:none"<?php endif;?>>
+                                                        <div class="row show">
+                                                            <?php echo $this->formHidden($formreg->get('idusuario'))?>
+                                                            <div class="col-sm-2">
+                                                                <div class="form-group">
+                                                                    <?php echo $this->formLabel($formreg->get('sex'))?>
+                                                                    <?php echo $this->formSelect($formreg->get('sex'))?>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4">
+                                                                <div class="form-group">
+                                                                    <?php echo $this->formLabel($formreg->get('nom'))?>
+                                                                    <?php echo $this->formInput($formreg->get('nom'))?>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group">
+                                                                    <?php echo $this->formLabel($formreg->get('ape'))?>
+                                                                    <?php echo $this->formInput($formreg->get('ape'))?>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="form-group"<?php if($SESSION_PORTAL):?> style="display:none"<?php endif;?>>
+                                                                    <?php echo $this->formLabel($formreg->get('tipodoc'))?>
+                                                                    <?php echo $this->formSelect($formreg->get('tipodoc'))?>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <?php echo $this->formLabel($formreg->get('fecnac'))?>
+                                                                    <?php echo $this->formInput($formreg->get('fecnac')) // type hidden?>
+                                                                    <input type="text" id="usufecnac" class="form-control" placeholder="Fecha de nacimiento __/__/____" tabindex="7" />
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <?php echo $this->formLabel($formreg->get('telf'))?>
+                                                                    <?php echo $this->formInput($formreg->get('telf'))?>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <?php echo $this->formLabel($formreg->get('mail'))?>
+                                                                    <?php echo $this->formInput($formreg->get('mail'))?>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <?php echo $this->formLabel($formreg->get('pass'))?>
+                                                                    <?php echo $this->formInput($formreg->get('pass'))?>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-6">
+                                                                <div class="form-group"<?php if($SESSION_PORTAL):?> style="display:none"<?php endif;?>>
+                                                                    <?php echo $this->formLabel($formreg->get('nrodoc'))?>
+                                                                    <?php echo $this->formInput($formreg->get('nrodoc'))?>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <?php echo $this->formLabel($formreg->get('iddistrito'))?>
+                                                                    <?php echo $this->formSelect($formreg->get('iddistrito'))?>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <?php echo $this->formLabel($formreg->get('cel'))?>
+                                                                    <?php echo $this->formInput($formreg->get('cel'))?>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="verifmail">Verificar email *</label>
+                                                                    <input type="email" value="<?php echo $formreg->get('mail')->getValue()?>" class="form-control" id="verifmail" name="verifmail" placeholder="Verificar email" tabindex='12' required>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="verifpass">Verificar contrase&ntilde;a *</label>
+                                                                    <input type="password" value="<?php echo $formreg->get('pass')->getValue()?>" id="verifpass" name="verifpass" class="form-control" placeholder="Verificar contrase&ntilde;a" tabindex='14' required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-5"></div>
+                                                            <div style="display:none;" class="col-xs-2">
+                                                                <button type="button" id="btnRegistrar" class="btn btn-primary">
+                                                                    <?php echo (!$SESSION_PORTAL)?'Registrarse':'Actualizar'?>
+                                                                </button>
+                                                            </div>
+                                                            <div class="col-xs-5"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="tab-pane active" id="citaPaso1">
+
+                                                <div class="row show-grid" style="display:none">
+                                                    <div class="col-sm-6"><?php echo $this->formRow($form->get('idseguro'))?></div>
+                                                    <div class="col-xs-6"></div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <label>Paso1: Elige la sede</label>
+                                                        <?php //echo $this->formLabel($form->get('frmsede'))?>
+                                                    </div>
+                                                    <div class="col-xs-6"></div>
+                                                </div>
+
+                                                <div class="row show-grid">
+                                                    <div class="col-sm-6"><?php echo $this->formSelect($form->get('frmsede'))?></div>
+                                                    <div class="col-xs-6">
+                                                        <button id="citaVerMapa" type="button" class="btn btn-link" disabled>Ver mapa</button>
+                                                    </div>
+                                                </div>
+                                                <div id="rowIfrmMapa" class="row show-grid" style="display:none">
+                                                    <div class="col-sm-12">
+                                                        <iframe width="100%" height="310" frameborder="0" scrolling="no" name="ifrmMapa" id="ifrmMapa"></iframe><!--src="/mapa"-->
+                                                    </div>
+                                                </div>
+
+                                                <div class="row show-grid">
+                                                    <div class="col-sm-6">
+                                                        <label for="idseguro">Paso2: Elija la fecha</label>
+                                                        <select id="frmhorario" class="form-control" disabled>
+                                                            <option value="0">- Elija horario</option><?php echo $this->days?>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xs-6"></div>
+                                                </div>
+                                                
+                                                <div class="row show-grid">
+                                                    <div class="col-sm-6">
+                                                        <label for="idseguro">Paso3: Elija un Especialista</label>
+                                                        <select id="frmespec" class="form-control" disabled>
+                                                            <option>- Elija especialista</option>
+                                                        </select>
+                                                        <?php echo $this->formHidden($form->get('idhorario'))?>
+                                                    </div>
+                                                    <div class="col-xs-6"></div>
+                                                </div>
+                                                
+                                                <?php /*
+                                                <div class="row">
+                                                    <div class="col-sm-6"><?php echo $this->formLabel($form->get('idhorario'))?></div>
+                                                    <div class="col-xs-6"></div>
+                                                </div>
+                                                <div class="row show-grid">
+                                                    <div class="col-sm-6">
+                                                        <select id="frmhorario" class="form-control" disabled>
+                                                            <option value="0">- Elija horario</option><?php echo $this->days?>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <select id="frmespec" class="form-control" disabled>
+                                                            <option>- Elija especialista</option>
+                                                        </select>
+                                                        <?php echo $this->formHidden($form->get('idhorario'))?>
+                                                    </div>
+                                                </div> */?>
+                                                
+                                                <div class="row">
+                                                    <?php echo $this->formHidden($form->get('datehour'))?>
+                                                    <div id="citaHoras" class="col-sm-12"></div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="tab-pane fade" id="citaPaso3">
+
+                                                <div class="row show">
+                                                    <div class="col-sm-12">
+                                                        <div class="well well-sm">
+                                                            <h5><span class="glyphicon glyphicon-list-alt"></span> &nbsp;DATOS DE LA RESERVA</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel panel-default">
+                                                    <div class="panel-body">
+                                                        <div class="row show">
+                                                            <div class="col-sm-1">
+                                                                <label for="usufecnac">Para</label>
+                                                            </div>
+                                                            <div class="col-sm-11" id="lblNom">
+                                                                <?php if($this->user){ echo $this->user['ape'].' '.$this->user['ape']; }?>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row show">
+                                                            <div class="col-sm-1">
+                                                                <label for="usufecnac">Sede</label>
+                                                            </div>
+                                                            <div class="col-sm-11" id="lblDir">[direccion]</div>
+                                                        </div>
+
+                                                        <div class="row show">
+                                                            <div class="col-sm-1">
+                                                                <label for="usufecnac">Fecha</label>
+                                                            </div>
+                                                            <div class="col-sm-3" id="lblFecha">[fecha]</div>
+                                                            <div class="col-sm-1">
+                                                                <label for="usufecnac">Hora</label>
+                                                            </div>
+                                                            <div class="col-sm-7" id="lblHora">[hora]</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row show">
+                                                    <div class="col-sm-5">
+                                                        <label for="usufecnac"><?php echo $this->formLabel($form->get('codprom'))?></label>
+                                                    </div>
+                                                    <div class="col-sm-7">
+                                                        <label for="usufecnac"><?php echo $this->formInput($form->get('codprom'))?></label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row show">
+                                                    <div class="col-sm-5">
+                                                        <label for="usufecnac"><?php echo $this->formLabel($form->get('idasistente'))?></label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <div class="form-group"><?php echo $this->formSelect($form->get('idasistente'))?></div>
+                                                    </div>
+
+                                                </div>
+
+
+                                                <div class="row show">
+                                                    <div class="col-sm-12">
+                                                        <div class="well well-sm">
+                                                            <h5><span class="glyphicon glyphicon-list-alt"></span> &nbsp;FORMAS DE PAGO</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row show">
+                                                    <div class="col-sm-9">
+                                                        <?php $COD_PAGO = $form->get('codpago')->getValueOptions() ?>
+                                                        <div id="rowTypePay" class="row show">
+                                                            <input type="radio" value="5" id="frmcodpago5" name="codpago" style="display:none;" />
+                                                            <div class="col-sm-6">
+                                                                <div class="row show-grid">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="tipo-pago" name-pago="visa">
+                                                                            <div class="pago-img">
+                                                                                <img src="<?php echo $this->portal('baseurl')?>/img/logos/visa.png" />
+                                                                                <input type="radio" value="1" id="frmcodpago1" name="codpago" style="display:none;" />    
+                                                                            </div>
+                                                                            <div class="pago-text"><?php echo $COD_PAGO[1]?></div>
+                                                                            <div style="clear:both;"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="row show-grid">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="tipo-pago" name-pago="mastercard">
+                                                                            <div class="pago-img">
+                                                                                <img src="<?php echo $this->portal('baseurl')?>/img/logos/master-card.png" />
+                                                                                <input type="radio" value="2" id="frmcodpago2" name="codpago" style="display:none;" />    
+                                                                            </div>
+                                                                            <div class="pago-text"><?php echo $COD_PAGO[2]?></div>
+                                                                            <div style="clear:both;"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="row show-grid">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="tipo-pago" name-pago="safety">
+                                                                            <div class="pago-img">
+                                                                                <img src="<?php echo $this->portal('baseurl')?>/img/logos/safety-pay.png" />
+                                                                                <input type="radio" value="3" id="frmcodpago3" name="codpago" style="display:none;" />    
+                                                                            </div>
+                                                                            <div class="pago-text"><?php echo $COD_PAGO[3]?></div>
+                                                                            <div style="clear:both;"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="row show-grid">
+                                                                    <div class="col-sm-12">
+                                                                        <div class="tipo-pago" name-pago="pagoefectivo">
+                                                                            <div class="pago-img">
+                                                                                <img src="<?php echo $this->portal('baseurl')?>/img/logos/pebig.jpg" />
+                                                                                <input type="radio" value="4" id="frmcodpago4" name="codpago" style="display:none;" />    
+                                                                            </div>
+                                                                            <div class="pago-text"><?php echo $COD_PAGO[4]?></div>
+                                                                            <div style="clear:both;"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="pago-total" class="col-sm-3">
+                                                         Total a pagar:<br />
+                                                         <b>S/.35.00</b>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row show">
+                                                    <div class="col-sm-12">
+                                                        <div class="well well-sm">
+                                                            <h5><span class="glyphicon glyphicon-info-sign"></span> &nbsp;TERMINOS Y CONDICIONES</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row show">
+                                                    <div id="termsCond" class="col-sm-12">
+                                                        <ul>
+                                                            <li>Para reservar su cita debe hacer un pago de s/. 35 soles. El día de su cita el monto lo tendrá a su favor.</li>
+                                                            <li>En caso desee reagendar su cita puede hacerlo hasta con 4 horas de anticipación antes de su cita.</li>
+                                                            <li>Cita reservada y no asistida se considera como perdida. En caso de no asistir a su cita, el monto será tomado como costo de reserva sin posibilidad de reagendar.</li>
+                                                            <li>En OSI apreciamos la puntualidad. Las citas son puntuales, no hay tolerancia. Debe llegar con al menos 10 minutos de anticipación.</li>
+                                                            <li>Los costos de la Consulta para afiliados a compañía de Seguro / EPS pueden variar según cobertura del paciente. Inclusive puede que no tengan cobertura para los servicios prestados en OSI. El costo del deducible mostrado es aproximado.</li>                                                        
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="bgmodal"></div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <button id="btnBack" type="button" class="btn btn-info" style="width:100%; display:none;">
+                                                    &lt;&lt;&lt; Atras
+                                                </button>
+                                            </div>
+                                            <div class="col-xs-6"></div>
+                                            <div class="col-xs-3">
+                                                <button id="btnNext" type="button" class="btn btn-info" disabled="disabled" style="width:100%">
+                                                    Siguiente &gt;&gt;&gt;
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <?php echo $this->form()->closeTag()?>
+                            </div>
+                        </div>
+                        <form id="inputsForAlignet"></form>
+                        <div id="columna1" style="width:325px;">
+                            <!--div id="nube" class="desaparecer">
+                                <div style="margin-top:30px;width:250px;margin-left:30px;" id="tex-nube">
+                                    <p>Por favor completa de manera
+                                        correcta el siguiente formulario 
+                                        y separa tu cita.
+                                    </p>
+                                </div>
+                            </div-->
+                            <div id="img" class="desaparecer text-right cita-pasos" style="float:right;">
+                                <img src="images/cita-pasos.png" width="300" alt="Terapia Fisica en Lima" />
+                            </div>
+                        </div>
+                        
+                    <?php endif;?>
+                        
+                </div>

@@ -1,0 +1,100 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Mapa</title>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" language="javascript">
+    
+//IS_CITA = (window.parent.Global.action=='solicite-cita'); console.log(IS_CITA);
+
+function initialize(lati, long, text, isCita) {
+        console.log("IFRAME args:",arguments);
+        if(isCita){
+            document.body.style.width  = (628-30-30)+'px';
+            document.body.style.height = 310+'px';
+        }
+        //var isCita = IS_CITA;
+	var zom = 15;
+	var lat = 0; 
+	var lon = 0;
+	if(lati==0){
+            lat = -12.094179969304378;
+            lon = -77.0340499933809;
+            zom = 7;
+	}else{
+            lat = lati;
+            lon = long;
+        }
+
+        // Create an array of styles.
+        var styles = [
+            {
+                stylers: [
+                    {hue: "#00b2ff"},
+                    {gamma: 0.7},
+                    {saturation: -11},
+                    {lightness: 0}
+                ]
+            }
+        ];
+
+        var contentString = text;
+
+        var latlng = new google.maps.LatLng(lat, lon);
+        var myLatlng_pos = (isCita)?new google.maps.LatLng(lat+0.0055,lon-0.0002):
+                                    new google.maps.LatLng(lat+0.00120,lon-0.0002);
+
+        var myOptions = {
+            zoom: zom,
+            center: myLatlng_pos,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("mapa_empresa"), myOptions);
+
+        var mark = null;
+
+        if (lati != 0) {
+            var lok = new google.maps.LatLng(lat, lon);
+            var marker = new google.maps.Marker({position: lok, map: map});
+            //map.setCenter(lok);
+            mark = marker;
+        }
+
+        var infowindow = new google.maps.InfoWindow({content: contentString});
+
+        infowindow.open(map, marker); // OPEN bubble
+
+        google.maps.event.addListener(marker, 'click', function(){
+            infowindow.open(map, marker);
+        });
+    }
+
+</script>
+<script type="text/javascript" src="<?php echo $this->portal('basejs')?>/libs/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->portal('basejs')?>/libs/jquery.fancybox-1.3.4.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo $this->portal('basecss')?>/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+<script type="text/javascript" src="js/app/<?php echo $this->portal('mca')['ctrl']?>.js"></script>
+<script language="javascript" type="text/javascript">
+$(document).ready(function(){
+	var lat = -12.116313916501243;
+	var lon = -77.02660493552685;
+        var text = '<center style="width: 220px; height: 200px;"><div style="width: 100%; text-align: center;"><img src="images/logo-osi.png" width="167"></div><div style="padding-top:10px; clear: both;"><p style="margin: 0; padding: 0;"><font color="#006980"><span style="font-family:Tahoma, Geneva, sans-serif;font-size:14px;text-align:-webkit-auto; font-weight: bold;">Central Telefónica:<br/>739 0888</span></p><p style="margin: 0; padding: 0;"><br>    <span style="color:#006980;font-family:Tahoma, Geneva, sans-serif;font-size:12px;text-align:-webkit-auto">Calle González Prada 385. Alt. 50 de Paseo de la Republica.<br/>(Frente del Teatro Marsano, Espalda del Hiraoka de Miraflores)<br /><br /><span style="color:#504F51;font-family:Tahoma, Geneva, sans-serif;font-size:11px;text-align:-webkit-auto">Miraflores, Lima (Perú)</span><br></p></div></center>';
+        initialize(lat, lon, text, false);
+});
+</script>
+<style type="text/css">
+<!--
+html,body{ width: 628px; height: 495px; margin:0; padding: 0;}
+.mapempresa {	width:100%;	height:100%;	float:left;	background-color:#666; font-family:arial,sans-serif; font-size: 13px;}
+/*.gm-style>div>div>div>div>div{ width: 214px!important}
+.gm-style>div>div>div>div>div>div>div:nth-child(4){width: 212px!important}
+.gm-style>div>div>div>div>div>div>div:nth-child(2){width: 214px!important}*/
+-->
+</style>
+</head>
+<body>
+<div class="mapempresa" id="mapa_empresa"></div>
+</body>
+</html>
